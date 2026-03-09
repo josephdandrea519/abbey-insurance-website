@@ -10,3 +10,6 @@ Features:
 - Quote request forms
 - Mobile-first design
 - Hosted via Netlify
+Built with:
+- Next.js
+- Tailwind CSS
