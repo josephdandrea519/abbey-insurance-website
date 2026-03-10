@@ -222,14 +222,6 @@
     // Wire up coverage type checkboxes
     form.querySelectorAll('.coverage-type-check').forEach(function (cb) {
       cb.addEventListener('change', updateCoverageFields);
-      // Also clicking the label div
-      const btn = cb.closest('.type-checkbox-btn');
-      if (btn) {
-        btn.addEventListener('click', function (e) {
-          if (e.target !== cb) { cb.checked = !cb.checked; }
-          updateCoverageFields();
-        });
-      }
     });
 
     // ── Inline validation helpers
