@@ -770,14 +770,18 @@ nav {
 .sandy-stat .n { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #7de8e1; line-height: 1; }
 .sandy-stat .l { font-size: 0.73rem; color: rgba(255,255,255,0.55); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
 /* Sandy photo */
+.sandy-photo-section {
+  background: var(--pearl);
+  padding: 3rem 2rem;
+}
 .sandy-photo-wrap {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  max-width: 860px;
   position: relative;
-  height: 340px;
+  height: 420px;
   overflow: hidden;
-  display: block;
-  background: var(--ocean-deep);
+  border-radius: 20px;
+  box-shadow: 0 12px 48px rgba(13,59,94,0.18);
 }
 .sandy-photo-img {
   position: absolute;
@@ -787,23 +791,23 @@ nav {
   object-fit: cover;
   object-position: center;
   display: block;
-  filter: brightness(0.88) contrast(1.05);
 }
 .sandy-photo-caption {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1rem 1.5rem;
-  background: linear-gradient(to top, rgba(10,37,64,0.72) 0%, transparent 100%);
-  color: rgba(255,255,255,0.7);
-  font-size: 0.78rem;
+  padding: 0.75rem 1.2rem;
+  background: linear-gradient(to top, rgba(10,37,64,0.65) 0%, transparent 100%);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-family: 'DM Sans', sans-serif;
 }
 @media (max-width: 768px) {
-  .sandy-photo-wrap { height: 200px; }
+  .sandy-photo-wrap { height: 240px; border-radius: 14px; }
+  .sandy-photo-section { padding: 2rem 1rem; }
 }
 
 .sandy-quote-card {
