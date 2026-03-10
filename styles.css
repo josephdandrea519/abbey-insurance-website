@@ -154,19 +154,29 @@ nav {
 .nav-dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 14px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
+  padding-top: 14px;
+  min-width: 200px;
+  z-index: 9999;
+  background: transparent;
+}
+/* White panel sits below the transparent bridge */
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  inset: 14px 0 0 0;
   background: white;
   border-radius: 14px;
   border: 1px solid rgba(168,216,234,0.5);
   box-shadow: 0 16px 48px var(--shadow-deep);
-  min-width: 200px;
-  z-index: 9999;
-  overflow: hidden;
+  z-index: -1;
   animation: fadeUp 0.2s ease;
 }
+.nav-links li.dd-open .nav-dropdown { display: block; }
 .nav-dropdown a {
+  position: relative;
   display: block;
   padding: 0.75rem 1.2rem;
   color: var(--text);
@@ -175,10 +185,11 @@ nav {
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
   border-bottom: 1px solid rgba(168,216,234,0.25);
+  border-radius: 0;
 }
-.nav-dropdown a:last-child { border-bottom: none; }
+.nav-dropdown a:first-child { border-radius: 14px 14px 0 0; }
+.nav-dropdown a:last-child { border-radius: 0 0 14px 14px; border-bottom: none; }
 .nav-dropdown a:hover { background: var(--horizon); color: var(--ocean-mid); }
-.nav-links li.dd-open .nav-dropdown { display: block; }
 
 /* CTA button in nav */
 .nav-cta {
