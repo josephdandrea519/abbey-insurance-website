@@ -1,0 +1,53 @@
+[build]
+  publish = "./"
+  # No build command — plain HTML/CSS/JS site
+
+[[redirects]]
+  from = "/thank-you"
+  to = "/thank-you.html"
+  status = 301
+
+[[redirects]]
+  from = "/quote"
+  to = "/quote.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/auto-insurance"
+  to = "/auto-insurance-nj.html"
+  status = 301
+
+[[redirects]]
+  from = "/home-insurance"
+  to = "/home-insurance-nj.html"
+  status = 301
+
+[[redirects]]
+  from = "/business-insurance"
+  to = "/business-insurance-nj.html"
+  status = 301
+
+[[redirects]]
+  from = "/renters-insurance"
+  to = "/renters-insurance-nj.html"
+  status = 301
+
+[[redirects]]
+  from = "/sandy"
+  to = "/hurricane-sandy.html"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
