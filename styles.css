@@ -774,14 +774,16 @@ nav {
   margin: 0;
   padding: 0;
   position: relative;
-  max-height: 520px;
+  height: 520px;
   overflow: hidden;
   display: block;
   background: var(--ocean-deep);
 }
 .sandy-photo-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 520px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -801,8 +803,7 @@ nav {
   font-family: 'DM Sans', sans-serif;
 }
 @media (max-width: 768px) {
-  .sandy-photo-img { height: 260px; }
-  .sandy-photo-wrap { max-height: 260px; }
+  .sandy-photo-wrap { height: 260px; }
 }
 
 .sandy-quote-card {
