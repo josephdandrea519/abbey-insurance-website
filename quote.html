@@ -39,7 +39,7 @@
         <a href="auto-insurance-nj.html">Auto Insurance</a>
         <a href="home-insurance-nj.html">Home Insurance</a>
         <a href="business-insurance-nj.html">Business Insurance</a>
-        <a href="renters-insurance-nj.html">Renters Insurance</a>
+        <a href="watercraft-insurance-nj.html">Watercraft Insurance</a>
       </div>
     </li>
     <li><a href="about.html">About</a></li>
@@ -56,7 +56,7 @@
     <a href="auto-insurance-nj.html">Auto Insurance</a>
     <a href="home-insurance-nj.html">Home Insurance</a>
     <a href="business-insurance-nj.html">Business Insurance</a>
-    <a href="renters-insurance-nj.html">Renters Insurance</a>
+    <a href="watercraft-insurance-nj.html">Watercraft Insurance</a>
   </div>
   <a href="about.html">About</a>
   <a href="hurricane-sandy.html">Sandy</a>
@@ -89,7 +89,7 @@
     <div class="quote-container" id="quote-form-container">
       <div class="quote-header">
         <h2>Start Your Free Quote</h2>
-        <p>5 simple steps · No obligation · Mon–Fri 8am–4pm · A real family agent calls you back</p>
+        <p>5 simple steps · No obligation · Mon–Fri 9am–4pm · A real family agent calls you back</p>
       </div>
 
       <!-- Progress -->
@@ -153,11 +153,11 @@
               <div class="t-name">Business Insurance</div>
               <div class="t-desc">Commercial &amp; LLC</div>
             </label>
-            <label class="type-checkbox-btn" id="btn-renters">
-              <input type="checkbox" class="coverage-type-check" name="coverage_types" value="Renters Insurance" />
-              <span class="t-emoji">🔑</span>
-              <div class="t-name">Renters Insurance</div>
-              <div class="t-desc">Apartments &amp; rentals</div>
+            <label class="type-checkbox-btn" id="btn-watercraft">
+              <input type="checkbox" class="coverage-type-check" name="coverage_types" value="Watercraft Insurance" />
+              <span class="t-emoji">⚓</span>
+              <div class="t-name">Watercraft Insurance</div>
+              <div class="t-desc">Boats &amp; personal watercraft</div>
             </label>
           </div>
           <div class="step-nav"><button type="button" class="btn-next" style="width:100%;" data-next-step="2">Continue →</button></div>
@@ -274,15 +274,18 @@
             <div class="form-group"><label for="years_in_business">Years in Business</label><input type="text" id="years_in_business" name="years_in_business" placeholder="e.g. 5" /></div>
           </div>
 
-          <!-- RENTERS SECTION -->
-          <div class="coverage-fields" id="renters-fields">
-            <div class="coverage-fields-header">🔑 Renters Insurance Details</div>
+          <!-- WATERCRAFT SECTION -->
+          <div class="coverage-fields" id="watercraft-fields">
+            <div class="coverage-fields-header">⚓ Watercraft Insurance Details</div>
             <div class="form-row">
-              <div class="form-group"><label for="dwelling_type">Dwelling Type *</label><select id="dwelling_type" name="dwelling_type" class="form-select"><option value="">Select...</option><option>Apartment</option><option>Condo</option><option>Townhouse</option><option>House</option><option>Other</option></select></div>
-              <div class="form-group"><label for="belongings_value">Est. Value of Belongings *</label><select id="belongings_value" name="belongings_value" class="form-select"><option value="">Select...</option><option>Under $10,000</option><option>$10,000 – $25,000</option><option>$25,000 – $50,000</option><option>$50,000 – $100,000</option><option>Over $100,000</option></select></div>
+              <div class="form-group"><label for="vessel_type">Vessel Type *</label><select id="vessel_type" name="vessel_type" class="form-select"><option value="">Select...</option><option>Powerboat</option><option>Sailboat</option><option>Fishing Boat</option><option>Jet Ski / Personal Watercraft</option><option>Pontoon Boat</option><option>Kayak / Canoe</option><option>Other</option></select></div>
+              <div class="form-group"><label for="vessel_year">Vessel Year *</label><input type="text" id="vessel_year" name="vessel_year" placeholder="e.g. 2019" maxlength="4" /></div>
             </div>
-            <div class="form-group"><label>High-Value Items? (jewelry, art, electronics) *</label><div class="radio-group"><label class="radio-label"><input type="radio" name="high_value_items" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="high_value_items" value="No" /> No</label></div></div>
-            <div class="form-group hidden" id="high-value-description-group"><label for="high_value_description">Describe High-Value Items</label><textarea id="high_value_description" name="high_value_description" placeholder="e.g. Diamond ring (~$5,000), Gibson guitar (~$3,000)"></textarea></div>
+            <div class="form-row">
+              <div class="form-group"><label for="vessel_length">Vessel Length (ft) *</label><input type="text" id="vessel_length" name="vessel_length" placeholder="e.g. 22" /></div>
+              <div class="form-group"><label for="vessel_value">Estimated Value *</label><select id="vessel_value" name="vessel_value" class="form-select"><option value="">Select...</option><option>Under $10,000</option><option>$10,000 – $25,000</option><option>$25,000 – $50,000</option><option>$50,000 – $100,000</option><option>Over $100,000</option></select></div>
+            </div>
+            <div class="form-group"><label>Stored at Marina? *</label><div class="radio-group"><label class="radio-label"><input type="radio" name="marina_stored" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="marina_stored" value="No" /> No</label></div></div>
           </div>
 
           <div class="step-nav">
@@ -351,7 +354,7 @@
       <div style="background:white;border-radius:16px;padding:1.5rem;border:1px solid rgba(168,216,234,0.4);box-shadow:0 4px 16px var(--shadow);">
         <div style="font-size:2rem;margin-bottom:0.5rem;">📞</div>
         <strong style="color:var(--ocean-deep);display:block;margin-bottom:0.3rem;">Real Person Calls You</strong>
-        <p style="font-size:0.82rem;color:var(--muted);line-height:1.5;">Carrie, Erin, or Chris will call within one business day — Mon–Fri 8am–4pm.</p>
+        <p style="font-size:0.82rem;color:var(--muted);line-height:1.5;">Carrie, Erin, or Chris will call within one business day — Mon–Fri 9am–4pm.</p>
       </div>
       <div style="background:white;border-radius:16px;padding:1.5rem;border:1px solid rgba(168,216,234,0.4);box-shadow:0 4px 16px var(--shadow);">
         <div style="font-size:2rem;margin-bottom:0.5rem;">🤝</div>
@@ -372,12 +375,12 @@
         <address class="footer-nap" style="font-style:normal;">
           One Cedar Street · Barnegat, NJ 08005<br>
           Phone: (609) 698-4175 · Email: <!-- CLIENT: insert email --><br>
-          Mon–Fri 8am–4pm · Weekends Closed · NJ Licensed · Est. 1999
+          Mon–Fri 9am–4pm · Weekends Closed · NJ Licensed · Est. 1999
         </address>
       </div>
-      <div class="footer-col"><h4>Coverage</h4><ul><li><a href="auto-insurance-nj.html">Auto Insurance</a></li><li><a href="home-insurance-nj.html">Home Insurance</a></li><li><a href="business-insurance-nj.html">Business Insurance</a></li><li><a href="renters-insurance-nj.html">Renters Insurance</a></li></ul></div>
+      <div class="footer-col"><h4>Coverage</h4><ul><li><a href="auto-insurance-nj.html">Auto Insurance</a></li><li><a href="home-insurance-nj.html">Home Insurance</a></li><li><a href="business-insurance-nj.html">Business Insurance</a></li><li><a href="watercraft-insurance-nj.html">Watercraft Insurance</a></li></ul></div>
       <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="hurricane-sandy.html">Sandy Response</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:6096984175">📞 (609) 698-4175</a></li><li><a href="mailto:<!-- CLIENT: insert email -->">✉️ <!-- CLIENT: insert email --></a></li><li><span style="color:rgba(255,255,255,0.5);font-size:0.88rem;">Mon–Fri 8am–4pm</span></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:6096984175">📞 (609) 698-4175</a></li><li><a href="mailto:<!-- CLIENT: insert email -->">✉️ <!-- CLIENT: insert email --></a></li><li><span style="color:rgba(255,255,255,0.5);font-size:0.88rem;">Mon–Fri 9am–4pm</span></li></ul></div>
     </div>
     <div class="footer-bottom">
       <div>© 2026 Abbey Insurance LLC · All Rights Reserved · NJ Licensed Independent Insurance Agency · Est. 1999</div>
