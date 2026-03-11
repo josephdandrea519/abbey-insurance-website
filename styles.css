@@ -29,7 +29,7 @@
   --sand:          #f0e8d8;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--pearl);
@@ -1424,20 +1424,14 @@ footer {
   .hero-visual { display: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 
-  /* ── Mobile hero text alignment fix ── */
-  .hero { padding-left: 1.5rem; padding-right: 1.5rem; overflow-x: hidden; }
-  .hero-inner { padding: 0; width: 100%; box-sizing: border-box; }
-  .hero-inner > div:first-child {
-    width: 100%;
-    max-width: 100%;
-    margin-left: 0;
-    padding-left: 0;
-  }
-  .hero h1 { font-size: clamp(2rem, 6vw, 3rem); text-align: left; }
-  .hero p { text-align: left; max-width: 100%; }
-  .hero-badge { text-align: left; }
-  .hero-actions { justify-content: flex-start; }
-  .hero-stats { justify-content: flex-start; }
+  /* ── Mobile hero fix ── */
+  /* min-width:0 prevents grid cells from expanding to fit nowrap children */
+  .hero-inner > div { min-width: 0; }
+  .hero-badge { white-space: normal; justify-content: center; text-align: center; }
+  .hero h1 { font-size: clamp(1.9rem, 5.5vw, 3rem); text-align: center; }
+  .hero p { text-align: center; max-width: 100%; }
+  .hero-actions { justify-content: center; }
+  .hero-stats { justify-content: center; }
 }
 
 @media (max-width: 600px) {
