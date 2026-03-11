@@ -1424,25 +1424,20 @@ footer {
   .hero-visual { display: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 
-  /* ── Mobile hero text centering fix ── */
-  .hero { padding-left: 1.5rem; padding-right: 1.5rem; }
-  .hero-inner {
-    text-align: center;
-    justify-items: center;
-    padding: 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
+  /* ── Mobile hero text alignment fix ── */
+  .hero { padding-left: 1.5rem; padding-right: 1.5rem; overflow-x: hidden; }
+  .hero-inner { padding: 0; width: 100%; box-sizing: border-box; }
   .hero-inner > div:first-child {
     width: 100%;
     max-width: 100%;
-    overflow: visible;
+    margin-left: 0;
+    padding-left: 0;
   }
-  .hero h1 { font-size: clamp(2rem, 6vw, 3rem); }
-  .hero p { max-width: 100%; margin-left: auto; margin-right: auto; }
-  .hero-badge { margin-left: auto; margin-right: auto; }
-  .hero-actions { justify-content: center; }
-  .hero-stats { justify-content: center; }
+  .hero h1 { font-size: clamp(2rem, 6vw, 3rem); text-align: left; }
+  .hero p { text-align: left; max-width: 100%; }
+  .hero-badge { text-align: left; }
+  .hero-actions { justify-content: flex-start; }
+  .hero-stats { justify-content: flex-start; }
 }
 
 @media (max-width: 600px) {
