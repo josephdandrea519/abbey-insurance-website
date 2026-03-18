@@ -1414,9 +1414,11 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 960px) {
-  /* Show hamburger */
-  .nav-hamburger { display: flex; }
+  /* Show hamburger, hide desktop-only nav items */
+  .nav-hamburger { display: flex; margin-right: 0.25rem; }
   .nav-links { display: none; }
+  .nav-cta { display: none; }
+  nav { padding: 0 1rem; }
 
   /* Stack grids */
   .hero-inner,
