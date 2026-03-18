@@ -1445,7 +1445,9 @@ footer {
   .type-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .trust-bar, .hours-bar { gap: 1rem; }
-  .hero-stats { gap: 1.2rem; }
+  .hero-stats { gap: 0.6rem; flex-wrap: nowrap; }
+  .stat-num { font-size: 1.5rem; }
+  .stat-label { font-size: 0.6rem; letter-spacing: 0.02em; }
   .quote-container { padding: 1.5rem 1rem; }
   .section { padding: 60px 1.2rem; }
   .why-stat-row { grid-template-columns: 1fr 1fr; }
