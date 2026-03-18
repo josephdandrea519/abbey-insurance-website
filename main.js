@@ -208,7 +208,7 @@
         }
       });
       // Show/hide coverage detail sections
-      const sections = { auto: 'auto-fields', home: 'home-fields', business: 'business-fields', renters: 'renters-fields' };
+      const sections = { auto: 'auto-fields', home: 'home-fields', business: 'business-fields', renters: 'renters-fields', watercraft: 'watercraft-fields' };
       Object.keys(sections).forEach(function (key) {
         const sec = document.getElementById(sections[key]);
         if (sec) {
