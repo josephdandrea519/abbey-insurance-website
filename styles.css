@@ -236,6 +236,7 @@ nav {
   top: 68px;
   left: 0;
   right: 0;
+  height: auto;                              /* override height:68px from base nav rule */
   background: white;
   border-bottom: 1px solid rgba(168,216,234,0.4);
   box-shadow: 0 8px 32px var(--shadow);
@@ -1456,12 +1457,18 @@ footer {
   .hero-stats { justify-content: center; }
 }
 
+@media (max-width: 768px) {
+  /* Reduce page-hero padding earlier on tablet/mobile */
+  .page-hero { padding: 80px 1.2rem 60px; }
+}
+
 @media (max-width: 600px) {
   .form-row  { grid-template-columns: 1fr; }
   .type-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .trust-bar, .hours-bar { gap: 1rem; }
-  .hero-stats { gap: 0.6rem; flex-wrap: nowrap; }
+  /* Keep hero-stats wrappable so 3 stats fit on very small screens */
+  .hero-stats { gap: 0.6rem; flex-wrap: wrap; }
   .stat-num { font-size: 1.5rem; }
   .stat-label { font-size: 0.6rem; letter-spacing: 0.02em; }
   .quote-container { padding: 1.5rem 1rem; }
@@ -1469,6 +1476,10 @@ footer {
   .why-stat-row { grid-template-columns: 1fr 1fr; }
   .sandy-stats { grid-template-columns: 1fr 1fr; }
   .step-indicators { display: none; }
+  /* Prevent grid-cell overflow from minmax minimum exceeding mobile content width */
+  .reviews-grid { grid-template-columns: 1fr; }
+  .cards-grid   { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 380px) {
