@@ -662,14 +662,23 @@ nav {
 .coverage-section { background: var(--pearl); }
 .coverage-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
   margin-top: 3rem;
+}
+@media (max-width: 1100px) {
+  .coverage-cards { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  .coverage-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 460px) {
+  .coverage-cards { grid-template-columns: 1fr; }
 }
 .cov-card {
   background: white;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 1.5rem;
   border: 1px solid rgba(168,216,234,0.4);
   box-shadow: 0 4px 24px var(--shadow);
   transition: all 0.3s;
@@ -718,6 +727,13 @@ nav {
   transition: gap 0.2s;
 }
 .cov-link:hover { gap: 10px; }
+
+.cov-card--flood { border-color: rgba(62,207,198,0.4); background: linear-gradient(160deg, #ffffff 60%, rgba(62,207,198,0.06)); }
+.cov-card--flood::after { transform: scaleX(1); background: linear-gradient(90deg, var(--seafoam), #3ecfc6); }
+.cov-feature--highlight { color: var(--ocean-mid) !important; font-weight: 700; }
+.cov-feature--highlight::before { content: '' !important; display: none; }
+.cov-link--flood { color: var(--seafoam); font-size: 0.92rem; white-space: nowrap; }
+.cov-link--flood:hover { color: var(--ocean-mid); }
 
 /* ── STATS STRIP ── */
 .stats-strip {

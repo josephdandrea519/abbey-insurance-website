@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NJ Flood Insurance Quotes | Abbey Insurance LLC — Instant Online Quote</title>
+  <meta name="description" content="Get an instant flood insurance quote for your New Jersey home. Abbey Insurance LLC offers NFIP and private flood coverage statewide. Enter your address and see your options in seconds." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.abbeyinsurancellc.com/flood-insurance.html" />
+  <meta property="og:title" content="NJ Flood Insurance Quotes | Abbey Insurance LLC" />
+  <meta property="og:description" content="Get an instant flood insurance quote for your NJ home. Private flood coverage available. Abbey Insurance — serving all of New Jersey since 1999." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.abbeyinsurancellc.com/flood-insurance.html" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org", "@type": "InsuranceAgency", "name": "Abbey Insurance LLC",
+    "url": "https://www.abbeyinsurancellc.com", "telephone": "(609) 698-4175",
+    "address": { "@type": "PostalAddress", "addressLocality": "Barnegat", "addressRegion": "NJ", "addressCountry": "US" },
+    "areaServed": [{"@type":"State","name":"New Jersey"}]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.abbeyinsurancellc.com/"},
+      {"@type":"ListItem","position":2,"name":"Flood Insurance NJ","item":"https://www.abbeyinsurancellc.com/flood-insurance.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Is flood insurance required in New Jersey?","acceptedAnswer":{"@type":"Answer","text":"Flood insurance is required by mortgage lenders for homes located in FEMA-designated high-risk flood zones (AE, VE zones). Even outside mandatory zones, it is strongly recommended across New Jersey — particularly for coastal, bayfront, and low-lying properties. Standard homeowners policies do NOT cover flood damage."}},
+      {"@type":"Question","name":"How much does flood insurance cost in NJ?","acceptedAnswer":{"@type":"Answer","text":"Flood insurance premiums in New Jersey vary based on your home's flood zone, elevation, structure type, and coverage limits. NFIP policies average $700–$1,500/year for many NJ properties, while private flood coverage through Neptune and other carriers is often more competitive. Enter your address above for an instant quote."}},
+      {"@type":"Question","name":"What is the difference between NFIP and private flood insurance?","acceptedAnswer":{"@type":"Answer","text":"The National Flood Insurance Program (NFIP) is the government-backed program administered by FEMA, with coverage limits of $250,000 for the structure and $100,000 for contents. Private flood insurance through carriers like Neptune can offer higher limits, broader coverage, shorter waiting periods, and often lower premiums. Abbey Insurance can help you compare both options."}},
+      {"@type":"Question","name":"Is there a waiting period for flood insurance?","acceptedAnswer":{"@type":"Answer","text":"NFIP policies have a 30-day waiting period before coverage takes effect. Private flood insurance through Neptune and other carriers typically has a shorter waiting period — some as low as 10 days. Don't wait until a storm is forecast. Get covered now."}},
+      {"@type":"Question","name":"What does flood insurance cover?","acceptedAnswer":{"@type":"Answer","text":"Flood insurance covers direct physical damage to your home and belongings caused by flooding. This includes overflow of inland or tidal waters, rapid accumulation of surface water, and mudslides. It does NOT cover damage from moisture, mildew, or sewer backup unless directly caused by flooding."}}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Neptune Flood Widget -->
+  <script src="https://dev.neptuneflood.com/dtc-widget/NeptuneWidget.umd.js"></script>
+  <link rel="stylesheet" href="https://dev.neptuneflood.com/dtc-widget/NeptuneWidget.css">
+
+  <style>
+    /* ── FLOOD QUOTE WIDGET SECTION ── */
+    .flood-widget-section {
+      background: var(--pearl);
+      padding: 3.5rem 2rem;
+      border-bottom: 1px solid rgba(168,216,234,0.4);
+      scroll-margin-top: 80px;
+    }
+    .flood-widget-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .flood-widget-inner .section-label {
+      margin-bottom: 0.5rem;
+    }
+    .flood-widget-inner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      color: var(--ocean-deep);
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+    .flood-widget-inner > p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #neptune-widget {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .widget-disclaimer {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 1rem;
+      opacity: 0.7;
+    }
+
+    /* ── FLOOD INFO CARDS ── */
+    .flood-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+    .flood-card {
+      background: var(--pearl);
+      border: 1px solid rgba(168,216,234,0.5);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+    .flood-card-icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
+    .flood-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--ocean-deep);
+      margin-bottom: 0.5rem;
+    }
+    .flood-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── NFIP VS PRIVATE ── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .compare-table th {
+      background: var(--ocean-deep);
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .compare-table td {
+      padding: 0.7rem 1rem;
+      border-bottom: 1px solid rgba(168,216,234,0.35);
+      color: var(--muted);
+      vertical-align: top;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:nth-child(even) td { background: var(--horizon); }
+    .compare-table td:first-child { color: var(--text); font-weight: 500; }
+    .check { color: var(--seafoam); font-weight: 700; }
+    .cross { color: #c0392b; }
+
+    @media (max-width: 600px) {
+      .compare-table { font-size: 0.82rem; }
+      .compare-table th, .compare-table td { padding: 0.55rem 0.65rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="Abbey Insurance LLC Home">
+    <div class="nav-logo-icon">⚓</div>
+    <div class="nav-logo-text">Abbey Insurance <span>Independent · Barnegat, NJ</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li>
+      <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Coverage <span class="dd-arrow">▾</span></button>
+      <div class="nav-dropdown">
+        <a href="auto-insurance-nj.html">Auto Insurance</a>
+        <a href="home-insurance-nj.html">Home Insurance</a>
+        <a href="business-insurance-nj.html">Business Insurance</a>
+        <a href="watercraft-insurance-nj.html">Watercraft Insurance</a>
+        <a href="renters-insurance-nj.html">Renters Insurance</a>
+        <a href="flood-insurance.html" class="active">Flood Insurance</a>
+      </div>
+    </li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="hurricane-sandy.html">Sandy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="quote.html" class="nav-cta">Get a Quote</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-expanded="false" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- MOBILE NAV -->
+<nav class="nav-mobile" id="nav-mobile" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <button class="mobile-dd-toggle" data-target="mobile-coverage-dd">Coverage ▾</button>
+  <div class="mobile-dropdown" id="mobile-coverage-dd">
+    <a href="auto-insurance-nj.html">Auto Insurance</a>
+    <a href="home-insurance-nj.html">Home Insurance</a>
+    <a href="business-insurance-nj.html">Business Insurance</a>
+    <a href="watercraft-insurance-nj.html">Watercraft Insurance</a>
+    <a href="renters-insurance-nj.html">Renters Insurance</a>
+    <a href="flood-insurance.html" class="active">Flood Insurance</a>
+  </div>
+  <a href="about.html">About</a>
+  <a href="hurricane-sandy.html">Sandy</a>
+  <a href="contact.html">Contact</a>
+  <a href="quote.html" class="nav-cta-mobile">Get a Free Quote →</a>
+</nav>
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>Flood Insurance NJ</span>
+    </nav>
+    <h1>New Jersey Flood Insurance — Instant Quotes, Real Coverage</h1>
+    <p>Standard homeowners policies don't cover flooding. In New Jersey — one of the most flood-prone states in the country — a separate flood policy isn't optional, it's essential. Get an instant quote below in seconds.</p>
+    <div class="page-hero-actions">
+      <a href="#get-quote" class="btn-primary">Get My Instant Quote →</a>
+      <a href="tel:6096984175" class="btn-secondary">📞 Call Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">🌊 NJ Flood Insurance Specialists</div>
+  <div class="trust-item">⚡ Instant Online Quotes</div>
+  <div class="trust-item">🏆 NFIP &amp; Private Flood Options</div>
+  <div class="trust-item">⭐ 4.9 Stars · 312 Reviews</div>
+  <div class="trust-item">📍 Serving All 21 NJ Counties</div>
+</div>
+
+<!-- NEPTUNE WIDGET -->
+<section class="flood-widget-section" id="get-quote">
+  <div class="flood-widget-inner">
+    <div class="section-label">Instant Flood Insurance Quote</div>
+    <h2>Get Your NJ Flood Insurance Quote in Seconds</h2>
+    <p>Enter your address below to see real-time flood insurance options for your property. Powered by Neptune Flood — one of the nation's top private flood carriers.</p>
+    <div id="neptune-widget"></div>
+    <p class="widget-disclaimer">Quotes provided by Neptune Flood. Abbey Insurance LLC acts as Agent of Record. Coverage subject to underwriting review.</p>
+  </div>
+</section>
+
+<!-- WHY FLOOD INSURANCE -->
+<section class="section bg-white">
+  <div class="section-inner">
+    <div style="max-width:860px;margin:0 auto;">
+      <div class="section-label">Why It Matters</div>
+      <h2 class="section-title">Why Every NJ Homeowner Needs Flood Insurance</h2>
+
+      <p style="font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;">New Jersey is consistently ranked among the top states for flood risk. From the Shore communities of Ocean and Monmouth counties, to the river corridors of Bergen, Essex, and Middlesex, to the Delaware basin towns of Burlington and Camden — flooding affects every corner of the state. And yet, standard homeowners insurance covers none of it.</p>
+
+      <p style="font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:2rem;">Hurricane Sandy was a brutal reminder of what that gap costs. Abbey Insurance helped <strong style="color:var(--ocean-deep);">200+ clients</strong> navigate Sandy claims — and the families who had flood coverage recovered. Those who didn't were left fighting with FEMA and out-of-pocket for six-figure repairs.</p>
+
+      <div class="flood-cards">
+        <div class="flood-card">
+          <div class="flood-card-icon">🚫</div>
+          <h3>Your Home Policy Doesn't Cover It</h3>
+          <p>Standard homeowners and renters policies explicitly exclude flood damage. If water rises from the ground up, you're not covered without a separate flood policy.</p>
+        </div>
+        <div class="flood-card">
+          <div class="flood-card-icon">📍</div>
+          <h3>It's Not Just Coastal Risk</h3>
+          <p>Over 40% of flood claims nationally come from outside high-risk flood zones. River flooding, stormwater, and heavy rain affect inland NJ properties just as hard.</p>
+        </div>
+        <div class="flood-card">
+          <div class="flood-card-icon">⏱️</div>
+          <h3>There's a Waiting Period</h3>
+          <p>NFIP policies have a 30-day waiting period. Don't wait for a storm to be on the radar. Private flood coverage through Neptune can have shorter waiting periods.</p>
+        </div>
+        <div class="flood-card">
+          <div class="flood-card-icon">💰</div>
+          <h3>FEMA Aid Is Not a Safety Net</h3>
+          <p>Disaster assistance from FEMA averages just $5,000–$7,000 per household — rarely enough to cover serious flood damage. Insurance is the only real protection.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NFIP VS PRIVATE -->
+<section class="section" style="background:var(--horizon);">
+  <div class="section-inner">
+    <div style="max-width:860px;margin:0 auto;">
+      <div class="section-label">Know Your Options</div>
+      <h2 class="section-title">NFIP vs. Private Flood Insurance</h2>
+      <p style="font-size:1rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem;">There are two main types of flood insurance available to NJ homeowners: the government-backed National Flood Insurance Program (NFIP) and private flood insurance through carriers like Neptune. Both have pros and cons — Abbey can help you compare.</p>
+
+      <div style="overflow-x:auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>NFIP (Government)</th>
+              <th>Private Flood (Neptune)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Building Coverage Limit</td>
+              <td>Up to $250,000</td>
+              <td>Higher limits available</td>
+            </tr>
+            <tr>
+              <td>Contents Coverage Limit</td>
+              <td>Up to $100,000</td>
+              <td>Higher limits available</td>
+            </tr>
+            <tr>
+              <td>Waiting Period</td>
+              <td>30 days</td>
+              <td>As low as 10 days</td>
+            </tr>
+            <tr>
+              <td>Loss of Use / Living Expenses</td>
+              <td><span class="cross">✗ Not included</span></td>
+              <td><span class="check">✓ Often included</span></td>
+            </tr>
+            <tr>
+              <td>Basement Coverage</td>
+              <td>Limited</td>
+              <td>Broader options</td>
+            </tr>
+            <tr>
+              <td>Pricing</td>
+              <td>FEMA rate tables</td>
+              <td>Often more competitive</td>
+            </tr>
+            <tr>
+              <td>Lender-Accepted</td>
+              <td><span class="check">✓ Yes</span></td>
+              <td><span class="check">✓ Yes</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="background:var(--pearl);border-radius:16px;padding:1.75rem 2rem;border:1px solid rgba(168,216,234,0.5);margin-top:2rem;text-align:center;">
+        <p style="font-size:1rem;color:var(--muted);margin-bottom:1.25rem;">Not sure which is right for your home? Enter your address above for an instant quote, or call us and we'll walk you through both options.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="#get-quote" class="btn-primary">Get My Instant Quote →</a>
+          <a href="tel:6096984175" class="btn-outline">📞 Talk to Carrie, Erin or Chris</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq-section">
+  <div class="section-inner">
+    <div class="text-center" style="margin-bottom:2.5rem;">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">NJ Flood Insurance FAQ</h2>
+    </div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Is flood insurance required in New Jersey?</span><span class="faq-icon">+</span></button><div class="faq-a">Flood insurance is required by mortgage lenders for homes in FEMA-designated high-risk flood zones. Even outside those zones, it's strongly recommended — particularly for coastal, bayfront, and low-lying NJ properties. Standard homeowners policies never cover flooding.</div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>How much does flood insurance cost in NJ?</span><span class="faq-icon">+</span></button><div class="faq-a">Premiums depend on your flood zone, elevation certificate, structure type, and coverage limits. NFIP policies average $700–$1,500/year for many NJ properties. Private flood coverage is often more competitive. Enter your address above for a real-time quote.</div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>What's the difference between NFIP and private flood insurance?</span><span class="faq-icon">+</span></button><div class="faq-a">NFIP is the government-backed program capped at $250,000 building / $100,000 contents with a 30-day waiting period. Private flood insurance through Neptune and others offers higher limits, broader coverage, shorter waits, and often lower premiums. Abbey can help you compare both.</div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>Is there a waiting period for flood insurance?</span><span class="faq-icon">+</span></button><div class="faq-a">Yes — NFIP has a 30-day waiting period. Private flood through Neptune may have as little as a 10-day wait. Don't wait for storm season. Get covered now so you're protected when you need it.</div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false"><span>What does flood insurance actually cover?</span><span class="faq-icon">+</span></button><div class="faq-a">Flood insurance covers direct physical damage from flooding — overflow of tidal or inland waters, rapid surface water accumulation, and mudslides. It does not cover gradual moisture damage, mold from pre-existing conditions, or sewer backup unless directly caused by a covered flood event.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Don't Wait for the Next Storm — Get Covered Today</h2>
+  <p>NJ's flood risk is real. A flood policy can mean the difference between recovery and financial ruin. Enter your address above or call us now.</p>
+  <div class="cta-actions">
+    <a href="#get-quote" class="btn-light">Get My Instant Quote →</a>
+    <a href="tel:6096984175" class="btn-ghost">📞 Talk to Carrie, Erin or Chris</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-text">Abbey Insurance LLC</div>
+        <div class="footer-wob">♀ Women-Owned · Est. 1999</div>
+        <p>Carrie, Erin &amp; Chris — your local, independent insurance family.</p>
+        <address class="footer-nap" style="font-style:normal;">
+          One Cedar Street · Barnegat, NJ 08005<br>
+          Phone: (609) 698-4175 · Email: <!-- CLIENT: insert email --><br>
+          Mon–Fri 9am–4pm · Weekends Closed · NJ Licensed · Est. 1999
+        </address>
+      </div>
+      <div class="footer-col"><h4>Coverage</h4><ul>
+        <li><a href="auto-insurance-nj.html">Auto Insurance</a></li>
+        <li><a href="home-insurance-nj.html">Home Insurance</a></li>
+        <li><a href="business-insurance-nj.html">Business Insurance</a></li>
+        <li><a href="watercraft-insurance-nj.html">Watercraft Insurance</a></li>
+        <li><a href="renters-insurance-nj.html">Renters Insurance</a></li>
+        <li><a href="flood-insurance.html">Flood Insurance</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Company</h4><ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="hurricane-sandy.html">Sandy Response</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="quote.html">Free Quote</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="tel:6096984175">📞 (609) 698-4175</a></li>
+        <li><a href="mailto:<!-- CLIENT: insert email -->">✉️ <!-- CLIENT: insert email --></a></li>
+        <li><span style="color:rgba(255,255,255,0.5);font-size:0.88rem;">Mon–Fri 9am–4pm</span></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Abbey Insurance LLC · All Rights Reserved · NJ Licensed Independent Insurance Agency · Est. 1999</div>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </div>
+  <div style="text-align:center;padding:0.6rem 0 0;font-size:12px;opacity:0.5;font-family:inherit;">Website by <a href="https://www.deepwaterwebsites.com" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">Deep Water Websites</a> &middot; deepwaterwebsites.com</div>
+</footer>
+
+</main>
+
+<script src="main.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    if (window.NeptuneWidget) {
+      NeptuneWidget.init({
+        element: "#neptune-widget",
+        source: "PKtNzuTmzIPCzGMvwrZudWM72UCYF4X8wx4zeE4y2v97SQO7xsF9puycWbhEJiu1iXTqdquEVzqvIvfvvBDqBe59K8Rp57Cd+6hpJkYCJ+I="
+      });
+    }
+  });
+</script>
+</body>
+</html>
