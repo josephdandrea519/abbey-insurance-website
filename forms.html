@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Forms</title></head>
+<body>
+  <!--
+    Shadow form registration file for Netlify Forms.
+    Netlify post-processes THIS file to register both forms.
+    The actual form pages (contact.html, quote.html) submit via fetch
+    so they are never scanned for form definitions — preventing post-processing loops.
+  -->
+
+  <!-- Contact form -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="bot-field" />
+    <input type="text"  name="first_name" />
+    <input type="text"  name="last_name" />
+    <input type="email" name="email" />
+    <input type="tel"   name="phone" />
+    <select name="subject"></select>
+    <textarea name="message"></textarea>
+  </form>
+
+  <!-- Quote request form -->
+  <form name="quote-request" netlify netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="bot-field" />
+    <input type="text" name="first_name" />
+    <input type="text" name="last_name" />
+    <input type="email" name="email" />
+    <input type="tel"  name="phone" />
+    <input type="text" name="coverage_types" />
+    <input type="text" name="dob" />
+    <input type="text" name="marital_status" />
+    <input type="text" name="street_address" />
+    <input type="text" name="city" />
+    <input type="text" name="state" />
+    <input type="text" name="zip" />
+    <input type="text" name="dependents" />
+    <input type="text" name="best_time_to_call" />
+    <input type="text" name="auto_year" />
+    <input type="text" name="auto_make" />
+    <input type="text" name="auto_model" />
+    <input type="text" name="auto_mileage" />
+    <input type="text" name="auto_use" />
+    <input type="text" name="additional_drivers" />
+    <input type="text" name="auto_violations" />
+    <input type="text" name="auto_accidents" />
+    <input type="text" name="current_auto_carrier" />
+    <input type="text" name="current_auto_premium" />
+    <input type="text" name="property_address" />
+    <input type="text" name="year_built" />
+    <input type="text" name="sq_footage" />
+    <input type="text" name="roof_age" />
+    <input type="text" name="construction_type" />
+    <input type="text" name="flood_zone" />
+    <input type="text" name="home_claims" />
+    <input type="text" name="current_home_carrier" />
+    <input type="text" name="current_home_premium" />
+    <input type="text" name="business_name" />
+    <input type="text" name="industry" />
+    <input type="text" name="num_employees" />
+    <input type="text" name="annual_revenue" />
+    <input type="text" name="biz_coverage" />
+    <input type="text" name="years_in_business" />
+    <input type="text" name="vessel_type" />
+    <input type="text" name="vessel_year" />
+    <input type="text" name="vessel_length" />
+    <input type="text" name="vessel_value" />
+    <input type="text" name="marina_stored" />
+    <input type="text" name="currently_insured" />
+    <input type="text" name="primary_carrier" />
+    <input type="text" name="shopping_reason" />
+    <input type="text" name="start_date" />
+    <input type="text" name="referral_source" />
+    <textarea name="notes"></textarea>
+    <input type="checkbox" name="consent" />
+    <input type="text" name="high_value_items" />
+    <textarea name="high_value_description"></textarea>
+    <input type="text" name="renters_address" />
+    <input type="text" name="renters_monthly_rent" />
+    <input type="text" name="renters_personal_property_value" />
+  </form>
+</body>
+</html>

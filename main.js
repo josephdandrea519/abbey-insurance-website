@@ -377,6 +377,25 @@
       });
     });
 
+    // ── Submit via fetch (form registered via forms.html shadow file)
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!validateStep(currentStep)) { return; }
+      collectFormData();
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+        .then(function () {
+          window.location.href = 'thank-you.html';
+        })
+        .catch(function () {
+          alert('There was a problem submitting your request. Please call us at (609) 698-4175.');
+        });
+    });
+
     // Initialize
     showStep(1);
   })();
@@ -387,8 +406,11 @@
   (function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) { return; }
-    // Netlify handles submission — just add client-side validation
+
     form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Client-side validation
       let valid = true;
       form.querySelectorAll('input[required], select[required], textarea[required]').forEach(function (field) {
         if (!field.value.trim()) {
@@ -397,9 +419,22 @@
         }
       });
       if (!valid) {
-        e.preventDefault();
         form.querySelector('.error').focus();
+        return;
       }
+
+      // Submit to Netlify via fetch (form registered via forms.html shadow file)
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+        .then(function () {
+          window.location.href = 'thank-you.html';
+        })
+        .catch(function () {
+          alert('There was a problem sending your message. Please call us at (609) 698-4175.');
+        });
     });
   })();
 
