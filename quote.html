@@ -8,7 +8,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.abbeyinsurancellc.com/quote.html" />
   <meta property="og:title" content="Get a Free NJ Insurance Quote | Abbey Insurance LLC" />
-  <meta property="og:description" content="Request a free NJ insurance quote in 3 minutes. Auto, home, business, renters. 20+ carriers. Family-owned independent agency in Barnegat, NJ." />
+  <meta property="og:description" content="Request a free NJ insurance quote in 3 minutes. Auto, home, business, renters. competitive carriers. Family-owned independent agency in Barnegat, NJ." />
   <meta property="og:type" content="website" />
 
   <script type="application/ld+json">
@@ -74,7 +74,7 @@
       <a href="index.html">Home</a><span>›</span><span>Get a Quote</span>
     </nav>
     <h1>Get Your Free New Jersey Insurance Quote</h1>
-    <p>Tell us what you need and one of our family agents — Carrie, Erin, or Chris — will call you back within one business day. No bots. No pressure. Just honest insurance from people who care.</p>
+    <p>Tell us what you need and one of our agents will call you back within one business day. No bots. No pressure. Just honest insurance from people who care.</p>
   </div>
 </section>
 
@@ -82,7 +82,7 @@
   <div class="trust-item">⏱️ Takes About 3 Minutes</div>
   <div class="trust-item">🤝 No Obligation</div>
   <div class="trust-item">👨‍👩‍👧 Real Family Agents Call You Back</div>
-  <div class="trust-item">🔍 20+ Carriers Compared</div>
+  <div class="trust-item">🔍 Competitive Carriers</div>
   <div class="trust-item">⭐ 4.9 Stars · 312 Reviews</div>
 </div>
 
@@ -222,47 +222,279 @@
           <!-- AUTO SECTION -->
           <div class="coverage-fields" id="auto-fields">
             <div class="coverage-fields-header">🚗 Auto Insurance Details</div>
+
+            <!-- Current Policy -->
             <div class="form-row">
-              <div class="form-group"><label for="auto_year">Vehicle Year *</label><input type="text" id="auto_year" name="auto_year" placeholder="e.g. 2022" maxlength="4" /></div>
-              <div class="form-group"><label for="auto_make">Make *</label><input type="text" id="auto_make" name="auto_make" placeholder="e.g. Toyota" /></div>
+              <div class="form-group"><label for="auto_current_carrier">Current Policy Carrier</label><input type="text" id="auto_current_carrier" name="auto_current_carrier" placeholder="e.g. Geico, Progressive, None" /></div>
+              <div class="form-group"><label for="auto_policy_expiration">Policy Expiration Date</label><input type="date" id="auto_policy_expiration" name="auto_policy_expiration" /></div>
+            </div>
+
+            <!-- Primary Driver -->
+            <div class="coverage-fields-header" style="font-size:0.88rem;margin-top:1.2rem;padding:0.5rem 0;border-top:1px solid var(--horizon);">👤 Primary Driver</div>
+            <div class="form-row">
+              <div class="form-group"><label for="driver1_occupation">Occupation</label><input type="text" id="driver1_occupation" name="driver1_occupation" placeholder="e.g. Teacher, Contractor" /></div>
+              <div class="form-group"><label for="driver1_license">Driver's License # &amp; State</label><input type="text" id="driver1_license" name="driver1_license" placeholder="e.g. D123456789 · NJ" /></div>
+            </div>
+            <div class="form-group"><label>Tickets or Accidents in the Last 5 Years?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="driver1_violations" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="driver1_violations" value="No" /> No</label></div></div>
+
+            <!-- Additional Driver 2 -->
+            <div class="coverage-fields-header" style="font-size:0.88rem;margin-top:1.2rem;padding:0.5rem 0;border-top:1px solid var(--horizon);">👤 Additional Driver #2 <em style="font-weight:400;font-size:0.78rem;color:var(--muted);">— leave blank if not applicable</em></div>
+            <div class="form-row">
+              <div class="form-group"><label for="driver2_name">Full Name</label><input type="text" id="driver2_name" name="driver2_name" /></div>
+              <div class="form-group"><label for="driver2_dob">Date of Birth</label><input type="date" id="driver2_dob" name="driver2_dob" /></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label for="auto_model">Model *</label><input type="text" id="auto_model" name="auto_model" placeholder="e.g. Camry" /></div>
-              <div class="form-group"><label for="auto_mileage">Annual Mileage *</label><select id="auto_mileage" name="auto_mileage" class="form-select"><option value="">Select...</option><option>Under 5,000 miles</option><option>5,000 – 10,000 miles</option><option>10,000 – 15,000 miles</option><option>15,000 – 20,000 miles</option><option>Over 20,000 miles</option></select></div>
+              <div class="form-group"><label for="driver2_occupation">Occupation</label><input type="text" id="driver2_occupation" name="driver2_occupation" /></div>
+              <div class="form-group"><label for="driver2_license">Driver's License # &amp; State</label><input type="text" id="driver2_license" name="driver2_license" /></div>
+            </div>
+            <div class="form-group"><label>Tickets or Accidents in the Last 5 Years?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="driver2_violations" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="driver2_violations" value="No" /> No</label></div></div>
+
+            <!-- Additional Driver 3 -->
+            <div class="coverage-fields-header" style="font-size:0.88rem;margin-top:1.2rem;padding:0.5rem 0;border-top:1px solid var(--horizon);">👤 Additional Driver #3 <em style="font-weight:400;font-size:0.78rem;color:var(--muted);">— leave blank if not applicable</em></div>
+            <div class="form-row">
+              <div class="form-group"><label for="driver3_name">Full Name</label><input type="text" id="driver3_name" name="driver3_name" /></div>
+              <div class="form-group"><label for="driver3_dob">Date of Birth</label><input type="date" id="driver3_dob" name="driver3_dob" /></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label for="auto_use">Primary Use *</label><select id="auto_use" name="auto_use" class="form-select"><option value="">Select...</option><option>Commute</option><option>Pleasure</option><option>Business</option></select></div>
-              <div class="form-group"><label>Additional Drivers? *</label><div class="radio-group"><label class="radio-label"><input type="radio" name="additional_drivers" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="additional_drivers" value="No" /> No</label></div></div>
+              <div class="form-group"><label for="driver3_occupation">Occupation</label><input type="text" id="driver3_occupation" name="driver3_occupation" /></div>
+              <div class="form-group"><label for="driver3_license">Driver's License # &amp; State</label><input type="text" id="driver3_license" name="driver3_license" /></div>
+            </div>
+            <div class="form-group"><label>Tickets or Accidents in the Last 5 Years?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="driver3_violations" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="driver3_violations" value="No" /> No</label></div></div>
+
+            <!-- Additional Driver 4 -->
+            <div class="coverage-fields-header" style="font-size:0.88rem;margin-top:1.2rem;padding:0.5rem 0;border-top:1px solid var(--horizon);">👤 Additional Driver #4 <em style="font-weight:400;font-size:0.78rem;color:var(--muted);">— leave blank if not applicable</em></div>
+            <div class="form-row">
+              <div class="form-group"><label for="driver4_name">Full Name</label><input type="text" id="driver4_name" name="driver4_name" /></div>
+              <div class="form-group"><label for="driver4_dob">Date of Birth</label><input type="date" id="driver4_dob" name="driver4_dob" /></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label for="auto_violations">Moving Violations (last 3 yrs) *</label><select id="auto_violations" name="auto_violations" class="form-select"><option value="">Select...</option><option>None</option><option>1</option><option>2</option><option>3+</option></select></div>
-              <div class="form-group"><label for="auto_accidents">At-Fault Accidents (last 5 yrs) *</label><select id="auto_accidents" name="auto_accidents" class="form-select"><option value="">Select...</option><option>None</option><option>1</option><option>2</option><option>3+</option></select></div>
+              <div class="form-group"><label for="driver4_occupation">Occupation</label><input type="text" id="driver4_occupation" name="driver4_occupation" /></div>
+              <div class="form-group"><label for="driver4_license">Driver's License # &amp; State</label><input type="text" id="driver4_license" name="driver4_license" /></div>
+            </div>
+            <div class="form-group"><label>Tickets or Accidents in the Last 5 Years?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="driver4_violations" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="driver4_violations" value="No" /> No</label></div></div>
+
+            <!-- Vehicle 1 -->
+            <div class="coverage-fields-header" style="font-size:0.88rem;margin-top:1.2rem;padding:0.5rem 0;border-top:1px solid var(--horizon);">🚗 Vehicle #1</div>
+            <div class="form-row">
+              <div class="form-group"><label for="v1_year">Year</label><input type="text" id="v1_year" name="v1_year" placeholder="e.g. 2022" maxlength="4" /></div>
+              <div class="form-group"><label for="v1_make">Make</label><input type="text" id="v1_make" name="v1_make" placeholder="e.g. Toyota" /></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label for="current_auto_carrier">Current Auto Carrier</label><input type="text" id="current_auto_carrier" name="current_auto_carrier" placeholder="e.g. State Farm, None" /></div>
-              <div class="form-group"><label for="current_auto_premium">Current Annual Premium</label><input type="text" id="current_auto_premium" name="current_auto_premium" placeholder="e.g. $1,200" /></div>
+              <div class="form-group"><label for="v1_model">Model</label><input type="text" id="v1_model" name="v1_model" placeholder="e.g. Camry" /></div>
+              <div class="form-group"><label for="v1_assigned_driver">Assigned Driver</label><input type="text" id="v1_assigned_driver" name="v1_assigned_driver" placeholder="Driver's name" /></div>
+            </div>
+            <div class="form-group"><label for="v1_vin">VIN <em style="font-weight:400;font-size:0.78rem;color:var(--muted);">(optional — we can collect on call)</em></label><input type="text" id="v1_vin" name="v1_vin" placeholder="17-character VIN" maxlength="17" /></div>
+            <div class="form-row">
+              <div class="form-group"><label>Comp / Collision?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="v1_comp_collision" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="v1_comp_collision" value="No" /> No</label></div></div>
+              <div class="form-group"><label for="v1_ownership">Financed, Leased, or Own?</label><select id="v1_ownership" name="v1_ownership" class="form-select"><option value="">Select...</option><option>Own</option><option>Financed</option><option>Leased</option></select></div>
+            </div>
+            <div class="form-group" id="v1_finance_group" style="display:none;"><label for="v1_finance_co">Finance / Lease Company &amp; Address</label><input type="text" id="v1_finance_co" name="v1_finance_co" placeholder="Company name and mailing address" /></div>
+
+            <!-- Vehicle 2 -->
+            <div class="coverage-fields-header" style="font-size:0.88rem;margin-top:1.2rem;padding:0.5rem 0;border-top:1px solid var(--horizon);">🚗 Vehicle #2 <em style="font-weight:400;font-size:0.78rem;color:var(--muted);">— leave blank if not applicable</em></div>
+            <div class="form-row">
+              <div class="form-group"><label for="v2_year">Year</label><input type="text" id="v2_year" name="v2_year" placeholder="e.g. 2019" maxlength="4" /></div>
+              <div class="form-group"><label for="v2_make">Make</label><input type="text" id="v2_make" name="v2_make" placeholder="e.g. Honda" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="v2_model">Model</label><input type="text" id="v2_model" name="v2_model" placeholder="e.g. Accord" /></div>
+              <div class="form-group"><label for="v2_assigned_driver">Assigned Driver</label><input type="text" id="v2_assigned_driver" name="v2_assigned_driver" placeholder="Driver's name" /></div>
+            </div>
+            <div class="form-group"><label for="v2_vin">VIN <em style="font-weight:400;font-size:0.78rem;color:var(--muted);">(optional)</em></label><input type="text" id="v2_vin" name="v2_vin" placeholder="17-character VIN" maxlength="17" /></div>
+            <div class="form-row">
+              <div class="form-group"><label>Comp / Collision?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="v2_comp_collision" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="v2_comp_collision" value="No" /> No</label></div></div>
+              <div class="form-group"><label for="v2_ownership">Financed, Leased, or Own?</label><select id="v2_ownership" name="v2_ownership" class="form-select"><option value="">Select...</option><option>Own</option><option>Financed</option><option>Leased</option></select></div>
+            </div>
+            <div class="form-group" id="v2_finance_group" style="display:none;"><label for="v2_finance_co">Finance / Lease Company &amp; Address</label><input type="text" id="v2_finance_co" name="v2_finance_co" placeholder="Company name and mailing address" /></div>
+
+            <!-- Vehicle 3 -->
+            <div class="coverage-fields-header" style="font-size:0.88rem;margin-top:1.2rem;padding:0.5rem 0;border-top:1px solid var(--horizon);">🚗 Vehicle #3 <em style="font-weight:400;font-size:0.78rem;color:var(--muted);">— leave blank if not applicable</em></div>
+            <div class="form-row">
+              <div class="form-group"><label for="v3_year">Year</label><input type="text" id="v3_year" name="v3_year" placeholder="e.g. 2017" maxlength="4" /></div>
+              <div class="form-group"><label for="v3_make">Make</label><input type="text" id="v3_make" name="v3_make" placeholder="e.g. Ford" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="v3_model">Model</label><input type="text" id="v3_model" name="v3_model" placeholder="e.g. F-150" /></div>
+              <div class="form-group"><label for="v3_assigned_driver">Assigned Driver</label><input type="text" id="v3_assigned_driver" name="v3_assigned_driver" placeholder="Driver's name" /></div>
+            </div>
+            <div class="form-group"><label for="v3_vin">VIN <em style="font-weight:400;font-size:0.78rem;color:var(--muted);">(optional)</em></label><input type="text" id="v3_vin" name="v3_vin" placeholder="17-character VIN" maxlength="17" /></div>
+            <div class="form-row">
+              <div class="form-group"><label>Comp / Collision?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="v3_comp_collision" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="v3_comp_collision" value="No" /> No</label></div></div>
+              <div class="form-group"><label for="v3_ownership">Financed, Leased, or Own?</label><select id="v3_ownership" name="v3_ownership" class="form-select"><option value="">Select...</option><option>Own</option><option>Financed</option><option>Leased</option></select></div>
+            </div>
+            <div class="form-group" id="v3_finance_group" style="display:none;"><label for="v3_finance_co">Finance / Lease Company &amp; Address</label><input type="text" id="v3_finance_co" name="v3_finance_co" placeholder="Company name and mailing address" /></div>
+
+            <!-- Vehicle 4 -->
+            <div class="coverage-fields-header" style="font-size:0.88rem;margin-top:1.2rem;padding:0.5rem 0;border-top:1px solid var(--horizon);">🚗 Vehicle #4 <em style="font-weight:400;font-size:0.78rem;color:var(--muted);">— leave blank if not applicable</em></div>
+            <div class="form-row">
+              <div class="form-group"><label for="v4_year">Year</label><input type="text" id="v4_year" name="v4_year" placeholder="e.g. 2015" maxlength="4" /></div>
+              <div class="form-group"><label for="v4_make">Make</label><input type="text" id="v4_make" name="v4_make" placeholder="e.g. Chevrolet" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="v4_model">Model</label><input type="text" id="v4_model" name="v4_model" placeholder="e.g. Silverado" /></div>
+              <div class="form-group"><label for="v4_assigned_driver">Assigned Driver</label><input type="text" id="v4_assigned_driver" name="v4_assigned_driver" placeholder="Driver's name" /></div>
+            </div>
+            <div class="form-group"><label for="v4_vin">VIN <em style="font-weight:400;font-size:0.78rem;color:var(--muted);">(optional)</em></label><input type="text" id="v4_vin" name="v4_vin" placeholder="17-character VIN" maxlength="17" /></div>
+            <div class="form-row">
+              <div class="form-group"><label>Comp / Collision?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="v4_comp_collision" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="v4_comp_collision" value="No" /> No</label></div></div>
+              <div class="form-group"><label for="v4_ownership">Financed, Leased, or Own?</label><select id="v4_ownership" name="v4_ownership" class="form-select"><option value="">Select...</option><option>Own</option><option>Financed</option><option>Leased</option></select></div>
+            </div>
+            <div class="form-group" id="v4_finance_group" style="display:none;"><label for="v4_finance_co">Finance / Lease Company &amp; Address</label><input type="text" id="v4_finance_co" name="v4_finance_co" placeholder="Company name and mailing address" /></div>
+
+            <!-- Liability Limits -->
+            <div class="coverage-fields-header" style="font-size:0.88rem;margin-top:1.2rem;padding:0.5rem 0;border-top:1px solid var(--horizon);">🛡️ Liability Limits</div>
+            <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.75rem;">Select desired limits (Bodily Injury Per Person / Per Occurrence / Property Damage)</p>
+            <div class="form-group">
+              <div class="radio-group" style="flex-direction:column;gap:0.5rem;">
+                <label class="radio-label"><input type="radio" name="auto_limits" value="15/30/25" /> 15/30/25 — Lowest / State Minimum</label>
+                <label class="radio-label"><input type="radio" name="auto_limits" value="25/50/25" /> 25/50/25</label>
+                <label class="radio-label"><input type="radio" name="auto_limits" value="50/100/50" /> 50/100/50</label>
+                <label class="radio-label"><input type="radio" name="auto_limits" value="100/300/50" /> 100/300/50</label>
+                <label class="radio-label"><input type="radio" name="auto_limits" value="250/500/100" /> 250/500/100</label>
+                <label class="radio-label"><input type="radio" name="auto_limits" value="Unsure" /> Not sure — help me choose</label>
+              </div>
+            </div>
+
+            <!-- Household -->
+            <div class="coverage-fields-header" style="font-size:0.88rem;margin-top:1.2rem;padding:0.5rem 0;border-top:1px solid var(--horizon);">🏠 Household</div>
+            <div class="form-row">
+              <div class="form-group"><label>Rent or Own Your Home?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="auto_rent_own" value="Own" /> Own</label><label class="radio-label"><input type="radio" name="auto_rent_own" value="Rent" /> Rent</label></div></div>
+              <div class="form-group"><label for="auto_medical_carrier">Current Medical Insurance Carrier</label><input type="text" id="auto_medical_carrier" name="auto_medical_carrier" placeholder="e.g. Horizon, Aetna" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="household_count">How Many People Live in the Home?</label><input type="number" id="household_count" name="household_count" min="1" max="20" placeholder="e.g. 4" /></div>
+              <div class="form-group"><label for="household_members">Names &amp; Are They Insured Elsewhere?</label><input type="text" id="household_members" name="household_members" placeholder="e.g. Jane Smith — insured with Geico" /></div>
             </div>
           </div>
 
           <!-- HOME SECTION -->
           <div class="coverage-fields" id="home-fields">
             <div class="coverage-fields-header">🏠 Homeowners Insurance Details</div>
-            <div class="form-group"><label for="property_address">Property Address (if different from above)</label><input type="text" id="property_address" name="property_address" placeholder="Leave blank if same as above" /></div>
+
+            <!-- Ownership / Policy Info -->
+            <div class="coverage-fields-subheader">Policy &amp; Ownership</div>
+            <div class="form-row">
+              <div class="form-group"><label>New Purchase? *</label><div class="radio-group"><label class="radio-label"><input type="radio" name="home_new_purchase" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="home_new_purchase" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="home-closing-date-group"><label for="home_closing_date">Closing Date</label><input type="date" id="home_closing_date" name="home_closing_date" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Mortgage on Property? *</label><div class="radio-group"><label class="radio-label"><input type="radio" name="home_mortgage" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="home_mortgage" value="No" /> No</label></div></div>
+              <div class="form-group"><label>Owned by LLC / Trust / Estate?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="home_llc" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="home_llc" value="No" /> No</label></div></div>
+            </div>
+            <div class="form-group hidden" id="home-llc-name-group"><label for="home_llc_name">Entity Name</label><input type="text" id="home_llc_name" name="home_llc_name" placeholder="LLC / Trust / Estate name" /></div>
+            <div class="form-row">
+              <div class="form-group"><label for="home_current_carrier">Current Carrier</label><input type="text" id="home_current_carrier" name="home_current_carrier" placeholder="e.g. Allstate, None" /></div>
+              <div class="form-group"><label for="home_carrier_exp">Policy Expiration Date</label><input type="date" id="home_carrier_exp" name="home_carrier_exp" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="home_additional_insured">Additional Insured (name)</label><input type="text" id="home_additional_insured" name="home_additional_insured" placeholder="Full name" /></div>
+              <div class="form-group"><label for="home_additional_insured_dob">Additional Insured DOB</label><input type="date" id="home_additional_insured_dob" name="home_additional_insured_dob" /></div>
+            </div>
+
+            <!-- Property Details -->
+            <div class="coverage-fields-subheader">Property Details</div>
+            <div class="form-group"><label for="home_property_address">Property Address (if different from above)</label><input type="text" id="home_property_address" name="home_property_address" placeholder="Leave blank if same as above" /></div>
+            <div class="form-row">
+              <div class="form-group"><label>Within 1,000 ft of Fire Hydrant? *</label><div class="radio-group"><label class="radio-label"><input type="radio" name="fire_hydrant" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="fire_hydrant" value="No" /> No</label></div></div>
+              <div class="form-group"><label for="home_property_type">Property Type *</label><select id="home_property_type" name="home_property_type" class="form-select"><option value="">Select...</option><option>Primary Residence</option><option>Vacation / Secondary Home</option><option>Rental Property</option><option>Seasonal</option></select></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Currently Renting Property?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="home_renting" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="home_renting" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="home-renting-duration-group"><label for="home_renting_duration">Rental Duration</label><input type="text" id="home_renting_duration" name="home_renting_duration" placeholder="e.g. Month-to-month, 1 year lease" /></div>
+            </div>
             <div class="form-row">
               <div class="form-group"><label for="year_built">Year Built *</label><input type="text" id="year_built" name="year_built" placeholder="e.g. 1985" maxlength="4" /></div>
-              <div class="form-group"><label for="sq_footage">Square Footage *</label><select id="sq_footage" name="sq_footage" class="form-select"><option value="">Select...</option><option>Under 1,000 sq ft</option><option>1,000 – 1,500 sq ft</option><option>1,500 – 2,000 sq ft</option><option>2,000 – 2,500 sq ft</option><option>2,500 – 3,500 sq ft</option><option>Over 3,500 sq ft</option></select></div>
+              <div class="form-group"><label for="sq_footage">Square Footage *</label><input type="text" id="sq_footage" name="sq_footage" placeholder="e.g. 1800" /></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label for="roof_age">Roof Age (years) *</label><select id="roof_age" name="roof_age" class="form-select"><option value="">Select...</option><option>Under 5 years</option><option>5 – 10 years</option><option>10 – 15 years</option><option>15 – 20 years</option><option>Over 20 years</option><option>Unknown</option></select></div>
-              <div class="form-group"><label for="construction_type">Construction Type *</label><select id="construction_type" name="construction_type" class="form-select"><option value="">Select...</option><option>Frame</option><option>Masonry</option><option>Mixed</option></select></div>
+              <div class="form-group"><label for="foundation_type">Foundation Type *</label><select id="foundation_type" name="foundation_type" class="form-select"><option value="">Select...</option><option>Slab</option><option>Crawl Space</option><option>Basement</option><option>Piers / Pilings</option></select></div>
+              <div class="form-group hidden" id="basement-finished-group"><label for="basement_finished">Basement Finished?</label><select id="basement_finished" name="basement_finished" class="form-select"><option value="">Select...</option><option>Yes, fully finished</option><option>Partially finished</option><option>Unfinished</option></select></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label>In Flood Zone? *</label><div class="radio-group"><label class="radio-label"><input type="radio" name="flood_zone" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="flood_zone" value="No" /> No</label><label class="radio-label"><input type="radio" name="flood_zone" value="Unknown" /> Unknown</label></div></div>
-              <div class="form-group"><label for="home_claims">Prior Claims (last 5 yrs) *</label><select id="home_claims" name="home_claims" class="form-select"><option value="">Select...</option><option>None</option><option>1</option><option>2</option><option>3+</option></select></div>
+              <div class="form-group"><label for="bedrooms">Bedrooms *</label><select id="bedrooms" name="bedrooms" class="form-select"><option value="">Select...</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></div>
+              <div class="form-group"><label for="bathrooms">Bathrooms *</label><select id="bathrooms" name="bathrooms" class="form-select"><option value="">Select...</option><option>1</option><option>1.5</option><option>2</option><option>2.5</option><option>3</option><option>3.5</option><option>4+</option></select></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label for="current_home_carrier">Current Home Carrier</label><input type="text" id="current_home_carrier" name="current_home_carrier" placeholder="e.g. Allstate, None" /></div>
-              <div class="form-group"><label for="current_home_premium">Current Annual Premium</label><input type="text" id="current_home_premium" name="current_home_premium" placeholder="e.g. $1,500" /></div>
+              <div class="form-group"><label>Single Family Home? *</label><div class="radio-group"><label class="radio-label"><input type="radio" name="single_family" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="single_family" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="num-families-group"><label for="num_families">How Many Families?</label><input type="text" id="num_families" name="num_families" placeholder="e.g. 2" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="home_garage">Garage</label><select id="home_garage" name="home_garage" class="form-select"><option value="">Select...</option><option>None</option><option>Attached</option><option>Detached</option><option>Carport</option></select></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="roof_type">Roof Type *</label><select id="roof_type" name="roof_type" class="form-select"><option value="">Select...</option><option>Asphalt Shingle</option><option>Metal</option><option>Flat / Rubber</option><option>Tile</option><option>Wood Shake</option><option>Slate</option><option>Other</option></select></div>
+              <div class="form-group"><label for="roof_updates">Last Roof Update</label><input type="text" id="roof_updates" name="roof_updates" placeholder="e.g. 2018 full replacement" /></div>
+            </div>
+
+            <!-- Property Features -->
+            <div class="coverage-fields-subheader">Property Features &amp; Disclosures</div>
+            <div class="form-row">
+              <div class="form-group"><label>Asbestos Siding?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="asbestos_siding" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="asbestos_siding" value="No" /> No</label></div></div>
+              <div class="form-group"><label>Wood Burning Stove?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="wood_stove" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="wood_stove" value="No" /> No</label></div></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Stucco Exterior?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="stucco" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="stucco" value="No" /> No</label></div></div>
+              <div class="form-group"><label for="heat_type">Heat Type *</label><select id="heat_type" name="heat_type" class="form-select"><option value="">Select...</option><option>Gas</option><option>Oil</option><option>Electric</option><option>Propane</option><option>Other</option></select></div>
+            </div>
+            <div class="form-group hidden" id="oil-tank-group"><label for="oil_tank">Oil Tank Location *</label><select id="oil_tank" name="oil_tank" class="form-select"><option value="">Select...</option><option>Above Ground – Inside</option><option>Above Ground – Outside</option><option>Underground</option></select></div>
+            <div class="form-group"><label for="system_updates">Heating / Plumbing / Electric Updates</label><input type="text" id="system_updates" name="system_updates" placeholder="e.g. Electric 2015, Plumbing 2010, Heating 2019" /></div>
+            <div class="form-row">
+              <div class="form-group"><label>Solar Panels?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="solar_panels" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="solar_panels" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="solar-details-group">
+                <div class="form-row">
+                  <div class="form-group"><label for="solar_count">Number of Panels</label><input type="text" id="solar_count" name="solar_count" placeholder="e.g. 20" /></div>
+                  <div class="form-group"><label for="solar_ownership">Leased or Owned?</label><select id="solar_ownership" name="solar_ownership" class="form-select"><option value="">Select...</option><option>Owned</option><option>Leased</option></select></div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Pool on Property?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="pool" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="pool" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="pool-details-group">
+                <label for="pool_type">Pool Type</label><select id="pool_type" name="pool_type" class="form-select"><option value="">Select...</option><option>Above Ground</option><option>In-Ground</option></select>
+              </div>
+            </div>
+            <div class="form-row hidden" id="pool-features-group">
+              <div class="form-group"><label>Diving Board or Slide?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="diving_board" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="diving_board" value="No" /> No</label></div></div>
+              <div class="form-group"><label>Pool Fenced?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="pool_fenced" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="pool_fenced" value="No" /> No</label></div></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Trampoline on Property?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="trampoline" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="trampoline" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="trampoline-fenced-group"><label>Trampoline Fenced / Enclosed?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="trampoline_fenced" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="trampoline_fenced" value="No" /> No</label></div></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Dog on Property?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="dog_on_property" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="dog_on_property" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="dog-details-group"><label for="home_dog_breed">Breed</label><input type="text" id="home_dog_breed" name="home_dog_breed" placeholder="e.g. Labrador, Pit Bull" /></div>
+            </div>
+            <div class="form-group hidden" id="bite-claims-group"><label>Any Bite Claims?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="dog_bite_claims" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="dog_bite_claims" value="No" /> No</label></div></div>
+            <div class="form-row">
+              <div class="form-group"><label>Farming / Livestock on Property?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="farming" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="farming" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="farming-type-group"><label for="farming_type">Type of Farming / Livestock</label><input type="text" id="farming_type" name="farming_type" placeholder="e.g. Chickens, horses, crops" /></div>
+            </div>
+
+            <!-- Claims & Risk -->
+            <div class="coverage-fields-subheader">Claims &amp; Risk</div>
+            <div class="form-row">
+              <div class="form-group"><label>Any Prior Claims?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="home_claims_history" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="home_claims_history" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="home-claims-detail-group"><label for="home_claims_detail">Claim Details</label><textarea id="home_claims_detail" name="home_claims_detail" placeholder="Date, type, and amount for each claim"></textarea></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Security Alarm?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="security_alarm" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="security_alarm" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="alarm-type-group"><label for="alarm_type">Alarm Type</label><select id="alarm_type" name="alarm_type" class="form-select"><option value="">Select...</option><option>Fire Only</option><option>Theft Only</option><option>Fire &amp; Theft</option><option>Central Station Monitored</option></select></div>
+            </div>
+            <div class="form-group"><label>Business Exposure (business run from home)?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="business_exposure" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="business_exposure" value="No" /> No</label></div></div>
+            <div class="form-row">
+              <div class="form-group"><label>Renovations Planned or In Progress?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="renovations" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="renovations" value="No" /> No</label></div></div>
+            </div>
+            <div class="form-group hidden" id="renovation-details-group">
+              <div class="form-row">
+                <div class="form-group"><label for="renovation_plans">What is Being Renovated?</label><input type="text" id="renovation_plans" name="renovation_plans" placeholder="e.g. Kitchen remodel, addition" /></div>
+                <div class="form-group"><label for="renovation_budget">Budget</label><input type="text" id="renovation_budget" name="renovation_budget" placeholder="e.g. $25,000" /></div>
+              </div>
+              <div class="form-group"><label for="renovation_timeframe">Timeframe</label><input type="text" id="renovation_timeframe" name="renovation_timeframe" placeholder="e.g. Starting June 2025, 3 months" /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Interested in a Flood Quote?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="flood_quote_interest" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="flood_quote_interest" value="No" /> No</label></div></div>
+              <div class="form-group hidden" id="elevation-cert-group"><label>Elevation Certificate Available?</label><div class="radio-group"><label class="radio-label"><input type="radio" name="elevation_cert" value="Yes" /> Yes</label><label class="radio-label"><input type="radio" name="elevation_cert" value="No" /> No</label></div></div>
             </div>
           </div>
 
@@ -281,7 +513,6 @@
               <div class="check-group">
                 <label class="check-label"><input type="checkbox" name="biz_coverage" value="General Liability" /> General Liability</label>
                 <label class="check-label"><input type="checkbox" name="biz_coverage" value="BOP" /> BOP</label>
-                <label class="check-label"><input type="checkbox" name="biz_coverage" value="Workers Comp" /> Workers Comp</label>
                 <label class="check-label"><input type="checkbox" name="biz_coverage" value="Commercial Auto" /> Commercial Auto</label>
                 <label class="check-label"><input type="checkbox" name="biz_coverage" value="Professional Liability" /> Professional Liability</label>
                 <label class="check-label"><input type="checkbox" name="biz_coverage" value="Cyber" /> Cyber Liability</label>
@@ -370,7 +601,7 @@
       <div style="background:white;border-radius:16px;padding:1.5rem;border:1px solid rgba(168,216,234,0.4);box-shadow:0 4px 16px var(--shadow);">
         <div style="font-size:2rem;margin-bottom:0.5rem;">📞</div>
         <strong style="color:var(--ocean-deep);display:block;margin-bottom:0.3rem;">Real Person Calls You</strong>
-        <p style="font-size:0.82rem;color:var(--muted);line-height:1.5;">Carrie, Erin, or Chris will call within one business day — Mon–Fri 9am–4pm.</p>
+        <p style="font-size:0.82rem;color:var(--muted);line-height:1.5;">One of our agents will call within one business day — Mon–Fri 9am–4pm.</p>
       </div>
       <div style="background:white;border-radius:16px;padding:1.5rem;border:1px solid rgba(168,216,234,0.4);box-shadow:0 4px 16px var(--shadow);">
         <div style="font-size:2rem;margin-bottom:0.5rem;">🤝</div>
@@ -387,7 +618,7 @@
       <div class="footer-brand">
         <div class="footer-logo-text">Abbey Insurance LLC</div>
         <div class="footer-wob">♀ Women-Owned · Est. 1999</div>
-        <p>Carrie, Erin &amp; Chris — your local, independent insurance family.</p>
+        <p>Your local, independent insurance family.</p>
         <address class="footer-nap" style="font-style:normal;">
           One Cedar Street · Barnegat, NJ 08005<br>
           Phone: (609) 698-4175 · Email: <!-- CLIENT: insert email --><br>
@@ -408,10 +639,57 @@
 </main>
 <script src="main.js" defer></script>
 <script>
+  /* ── Marital status → spouse fields */
   document.getElementById('marital_status').addEventListener('change', function () {
     var show = this.value === 'Married' || this.value === 'Domestic Partner';
     document.getElementById('spouse-fields').style.display = show ? 'block' : 'none';
   });
+
+  /* ── Auto: vehicle ownership → finance group */
+  ['v1','v2','v3','v4'].forEach(function(v) {
+    var sel = document.getElementById(v + '_ownership');
+    if (!sel) { return; }
+    sel.addEventListener('change', function () {
+      var grp = document.getElementById(v + '_finance_group');
+      if (grp) { grp.style.display = (this.value === 'Financed' || this.value === 'Leased') ? 'block' : 'none'; }
+    });
+  });
+
+  /* ── Home conditional helpers */
+  function homeToggle(triggerName, targetId, showWhen) {
+    document.querySelectorAll('input[name="' + triggerName + '"]').forEach(function(r) {
+      r.addEventListener('change', function() {
+        var el = document.getElementById(targetId);
+        if (el) { el.classList.toggle('hidden', this.value !== showWhen); }
+      });
+    });
+  }
+  function homeSelectToggle(selectId, targetId, showWhen) {
+    var sel = document.getElementById(selectId);
+    if (!sel) { return; }
+    sel.addEventListener('change', function() {
+      var el = document.getElementById(targetId);
+      if (el) { el.classList.toggle('hidden', this.value !== showWhen); }
+    });
+  }
+
+  homeToggle('home_new_purchase',   'home-closing-date-group',   'Yes');
+  homeToggle('home_llc',            'home-llc-name-group',       'Yes');
+  homeToggle('home_renting',        'home-renting-duration-group','Yes');
+  homeToggle('single_family',       'num-families-group',        'No');
+  homeToggle('solar_panels',        'solar-details-group',       'Yes');
+  homeToggle('pool',                'pool-details-group',        'Yes');
+  homeToggle('pool',                'pool-features-group',       'Yes');
+  homeToggle('trampoline',          'trampoline-fenced-group',   'Yes');
+  homeToggle('dog_on_property',     'dog-details-group',         'Yes');
+  homeToggle('dog_on_property',     'bite-claims-group',         'Yes');
+  homeToggle('farming',             'farming-type-group',        'Yes');
+  homeToggle('home_claims_history', 'home-claims-detail-group',  'Yes');
+  homeToggle('security_alarm',      'alarm-type-group',          'Yes');
+  homeToggle('renovations',         'renovation-details-group',  'Yes');
+  homeToggle('flood_quote_interest','elevation-cert-group',      'Yes');
+  homeSelectToggle('foundation_type','basement-finished-group',  'Basement');
+  homeSelectToggle('heat_type',      'oil-tank-group',           'Oil');
 </script>
 </body>
 </html>
