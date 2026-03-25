@@ -27,6 +27,14 @@
       }
     });
 
+    // Close on scroll
+    window.addEventListener('scroll', function () {
+      if (mobileNav.classList.contains('open')) {
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('open');
+      }
+    }, { passive: true });
+
     // Close on non-dropdown link click inside mobile nav
     mobileNav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
