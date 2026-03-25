@@ -27,11 +27,16 @@
       }
     });
 
-    // Close on scroll
+    // Close on scroll (only after scrolling more than 60px from where menu opened)
+    var scrollStartY = 0;
     window.addEventListener('scroll', function () {
       if (mobileNav.classList.contains('open')) {
-        hamburger.setAttribute('aria-expanded', 'false');
-        mobileNav.classList.remove('open');
+        if (Math.abs(window.scrollY - scrollStartY) > 60) {
+          hamburger.setAttribute('aria-expanded', 'false');
+          mobileNav.classList.remove('open');
+        }
+      } else {
+        scrollStartY = window.scrollY;
       }
     }, { passive: true });
 
