@@ -518,6 +518,71 @@ nav {
   white-space: nowrap;
 }
 
+/* ── FLOOD PROMO BAR ── */
+.flood-promo-bar {
+  background: linear-gradient(135deg, var(--ocean-deep) 0%, #0d6fa8 60%, #1a7fb5 100%);
+  border-top: 3px solid var(--seafoam);
+  border-bottom: 3px solid var(--seafoam);
+  padding: 1.4rem 2rem;
+}
+.flood-promo-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.flood-promo-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+.flood-promo-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+.flood-promo-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+.flood-promo-sub {
+  font-size: 0.83rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.5;
+}
+.flood-promo-sub strong { color: #fff; }
+.flood-promo-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--seafoam);
+  color: var(--ocean-deep);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, transform 0.15s;
+}
+.flood-promo-btn:hover {
+  background: #3fd9cc;
+  transform: translateY(-1px);
+}
+@media (max-width: 600px) {
+  .flood-promo-inner { flex-direction: column; align-items: flex-start; }
+  .flood-promo-btn { width: 100%; justify-content: center; }
+  .flood-promo-headline { font-size: 1.1rem; }
+}
+
 /* ── BUTTONS ── */
 .btn-primary {
   background: var(--seafoam);
