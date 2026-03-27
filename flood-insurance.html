@@ -433,6 +433,33 @@
       });
     }
   });
+
+  // Force Neptune dropdown background opaque regardless of widget CSS class names
+  var neptuneObserver = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      mutation.addedNodes.forEach(function(node) {
+        if (node.nodeType !== 1) return;
+        var candidates = [node].concat(Array.prototype.slice.call(node.querySelectorAll('*')));
+        candidates.forEach(function(el) {
+          var tag = el.tagName && el.tagName.toLowerCase();
+          var cls = el.className && typeof el.className === 'string' ? el.className.toLowerCase() : '';
+          var role = el.getAttribute && el.getAttribute('role');
+          if (tag === 'ul' || tag === 'li' || role === 'listbox' || role === 'option' ||
+              cls.indexOf('suggest') > -1 || cls.indexOf('dropdown') > -1 ||
+              cls.indexOf('autocomplete') > -1 || cls.indexOf('pac-') > -1 ||
+              cls.indexOf('result') > -1 || cls.indexOf('list') > -1) {
+            el.style.setProperty('background-color', '#ffffff', 'important');
+            el.style.setProperty('background', '#ffffff', 'important');
+            el.style.setProperty('opacity', '1', 'important');
+            if (tag === 'ul' || role === 'listbox') {
+              el.style.setProperty('box-shadow', '0 6px 24px rgba(0,40,80,0.15)', 'important');
+            }
+          }
+        });
+      });
+    });
+  });
+  neptuneObserver.observe(document.body, { childList: true, subtree: true });
 </script>
 </body>
 </html>
