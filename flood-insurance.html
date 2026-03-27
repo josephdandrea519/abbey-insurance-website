@@ -46,7 +46,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-
+  <!-- Neptune Flood Widget -->
+  <script src="https://neptuneflood.com/dtc-widget/NeptuneWidget.umd.js"></script>
+  <link rel="stylesheet" href="https://neptuneflood.com/dtc-widget/NeptuneWidget.css">
 
   <style>
     /* ── FLOOD QUOTE WIDGET SECTION ── */
@@ -222,13 +224,7 @@
     <div class="section-label">Instant Flood Insurance Quote</div>
     <h2>Get Your NJ Flood Insurance Quote in Seconds</h2>
     <p>Enter your address below to see real-time flood insurance options for your property. Powered by Neptune Flood — one of the nation's top private flood carriers.</p>
-    <iframe
-      src="https://neptuneflood.com/consumer-app/?source=PKtNzuTmzIPCzGMvwrZudWM72UCYF4X8wx4zeE4y2v97SQO7xsF9puycWbhEJiu1iXTqdquEVzqvIvfvvBDqBe59K8Rp57Cd%2B6hpJkYCJ%2BI%3D"
-      id="neptune-widget"
-      title="Get an Instant Flood Insurance Quote — Neptune Flood"
-      width="100%" height="650" frameborder="0" loading="lazy"
-      style="border:none;border-radius:10px;display:block;max-width:700px;margin:0 auto;">
-    </iframe>
+    <div id="neptune-widget"></div>
     <p class="widget-disclaimer">Quotes provided by Neptune Flood. Abbey Insurance LLC acts as Agent of Record. Coverage subject to underwriting review.</p>
   </div>
 </section>
@@ -408,5 +404,15 @@
 </main>
 
 <script src="main.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    if (window.NeptuneWidget) {
+      NeptuneWidget.init({
+        element: "#neptune-widget",
+        source: "PKtNzuTmzIPCzGMvwrZudWM72UCYF4X8wx4zeE4y2v97SQO7xsF9puycWbhEJiu1iXTqdquEVzqvIvfvvBDqBe59K8Rp57Cd+6hpJkYCJ+I="
+      });
+    }
+  });
+</script>
 </body>
 </html>
