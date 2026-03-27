@@ -128,6 +128,26 @@
       max-width: 700px;
       margin: 0 auto;
     }
+    /* Force Neptune widget address dropdown opaque */
+    #neptune-widget-home ul,
+    #neptune-widget-home [class*="suggest"],
+    #neptune-widget-home [class*="dropdown"],
+    #neptune-widget-home [class*="autocomplete"],
+    #neptune-widget-home [role="listbox"] {
+      background: #ffffff !important;
+      background-color: #ffffff !important;
+      opacity: 1 !important;
+      box-shadow: 0 6px 24px rgba(0,40,80,0.14) !important;
+    }
+    #neptune-widget-home li,
+    #neptune-widget-home [role="option"] {
+      background: #ffffff !important;
+      color: #0d3b5e !important;
+    }
+    #neptune-widget-home li:hover,
+    #neptune-widget-home [role="option"]:hover {
+      background: #eef6fb !important;
+    }
   </style>
 </head>
 <body>
@@ -261,7 +281,7 @@
 <section class="flood-widget-section" id="flood-quote">
   <div class="flood-widget-inner">
     <div class="section-label">Instant Flood Insurance Quote</div>
-    <h2>Get Your NJ Flood Insurance Quote and Buy Your Policy in Minutes</h2>
+    <h2>Get Your NJ Flood Insurance Quote in Seconds</h2>
     <p>Standard home insurance does <strong>not</strong> cover flood. Enter your address below to see real-time options for your property — powered by Neptune Flood.</p>
     <div id="neptune-widget-home"></div>
     <p class="widget-disclaimer">Quotes provided by Neptune Flood. Abbey Insurance LLC acts as Agent of Record. Coverage subject to underwriting review.</p>
