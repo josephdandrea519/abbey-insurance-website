@@ -46,10 +46,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Neptune Flood Widget -->
-  <script src="https://neptuneflood.com/dtc-widget/NeptuneWidget.umd.js"></script>
-  <link rel="stylesheet" href="https://neptuneflood.com/dtc-widget/NeptuneWidget.css">
-
   <style>
     /* ── FLOOD QUOTE WIDGET SECTION ── */
     .flood-widget-section {
@@ -82,15 +78,58 @@
       margin-left: auto;
       margin-right: auto;
     }
-    #neptune-widget {
-      max-width: 700px;
-      margin: 0 auto;
-    }
     .widget-disclaimer {
       font-size: 0.78rem;
       color: var(--muted);
       margin-top: 1rem;
       opacity: 0.7;
+    }
+    .neptune-form {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .neptune-input-row {
+      display: flex;
+      border: 2px solid rgba(77,145,180,0.45);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,40,80,0.09);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .neptune-input-row:focus-within {
+      border-color: var(--ocean-mid);
+      box-shadow: 0 4px 28px rgba(0,40,80,0.15);
+    }
+    .neptune-input-row input {
+      flex: 1;
+      padding: 1rem 1.25rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: var(--ocean-deep);
+      border: none;
+      outline: none;
+      background: transparent;
+      min-width: 0;
+    }
+    .neptune-input-row input::placeholder { color: rgba(13,59,94,0.38); }
+    .neptune-input-row button {
+      padding: 1rem 1.6rem;
+      background: var(--ocean-mid);
+      color: #fff;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .neptune-input-row button:hover { background: var(--ocean-deep); }
+    @media (max-width: 520px) {
+      .neptune-input-row { flex-direction: column; border-radius: 10px; }
+      .neptune-input-row button { border-radius: 0 0 8px 8px; padding: 0.9rem; }
     }
 
     /* ── FLOOD INFO CARDS ── */
@@ -224,7 +263,12 @@
     <div class="section-label">Instant Flood Insurance Quote</div>
     <h2>Get Your NJ Flood Insurance Quote in Seconds</h2>
     <p>Enter your address below to see real-time flood insurance options for your property. Powered by Neptune Flood — one of the nation's top private flood carriers.</p>
-    <div id="neptune-widget"></div>
+    <form class="neptune-form" onsubmit="neptuneQuote(event,'flood')">
+      <div class="neptune-input-row">
+        <input type="text" id="neptune-addr-flood" placeholder="Enter your property address..." autocomplete="street-address" required aria-label="Property address">
+        <button type="submit">Get My Quote →</button>
+      </div>
+    </form>
     <p class="widget-disclaimer">Quotes provided by Neptune Flood. Abbey Insurance LLC acts as Agent of Record. Coverage subject to underwriting review.</p>
   </div>
 </section>
@@ -405,14 +449,12 @@
 
 <script src="main.js" defer></script>
 <script>
-  window.addEventListener('load', function () {
-    if (window.NeptuneWidget) {
-      NeptuneWidget.init({
-        element: "#neptune-widget",
-        source: "PKtNzuTmzIPCzGMvwrZudWM72UCYF4X8wx4zeE4y2v97SQO7xsF9puycWbhEJiu1iXTqdquEVzqvIvfvvBDqBe59K8Rp57Cd+6hpJkYCJ+I="
-      });
-    }
-  });
+  function neptuneQuote(e, id) {
+    e.preventDefault();
+    var addr = document.getElementById('neptune-addr-' + id).value;
+    var url = 'https://neptuneflood.com/consumer-app/?source=PKtNzuTmzIPCzGMvwrZudWM72UCYF4X8wx4zeE4y2v97SQO7xsF9puycWbhEJiu1iXTqdquEVzqvIvfvvBDqBe59K8Rp57Cd%2B6hpJkYCJ%2BI%3D&address=' + encodeURIComponent(addr);
+    window.open(url, '_blank', 'noopener');
+  }
 </script>
 </body>
 </html>
