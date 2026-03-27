@@ -82,28 +82,28 @@
       margin-left: auto;
       margin-right: auto;
     }
-    #neptune-widget {
+    #neptune-widget-home {
       max-width: 700px;
       margin: 0 auto;
     }
     /* Force Neptune widget address dropdown opaque */
-    #neptune-widget ul,
-    #neptune-widget [class*="suggest"],
-    #neptune-widget [class*="dropdown"],
-    #neptune-widget [class*="autocomplete"],
-    #neptune-widget [role="listbox"] {
+    #neptune-widget-home ul,
+    #neptune-widget-home [class*="suggest"],
+    #neptune-widget-home [class*="dropdown"],
+    #neptune-widget-home [class*="autocomplete"],
+    #neptune-widget-home [role="listbox"] {
       background: #ffffff !important;
       background-color: #ffffff !important;
       opacity: 1 !important;
       box-shadow: 0 6px 24px rgba(0,40,80,0.14) !important;
     }
-    #neptune-widget li,
-    #neptune-widget [role="option"] {
+    #neptune-widget-home li,
+    #neptune-widget-home [role="option"] {
       background: #ffffff !important;
       color: #0d3b5e !important;
     }
-    #neptune-widget li:hover,
-    #neptune-widget [role="option"]:hover {
+    #neptune-widget-home li:hover,
+    #neptune-widget-home [role="option"]:hover {
       background: #eef6fb !important;
     }
     .widget-disclaimer {
@@ -244,7 +244,7 @@
     <div class="section-label">Instant Flood Insurance Quote</div>
     <h2>Get Your NJ Flood Insurance Quote in Seconds</h2>
     <p>Enter your address below to see real-time flood insurance options for your property. Powered by Neptune Flood — one of the nation's top private flood carriers.</p>
-    <div id="neptune-widget"></div>
+    <div id="neptune-widget-home"></div>
     <p class="widget-disclaimer">Quotes provided by Neptune Flood. Abbey Insurance LLC acts as Agent of Record. Coverage subject to underwriting review.</p>
   </div>
 </section>
@@ -428,7 +428,7 @@
   window.addEventListener('load', function () {
     if (window.NeptuneWidget) {
       NeptuneWidget.init({
-        element: "#neptune-widget",
+        element: "#neptune-widget-home",
         source: "PKtNzuTmzIPCzGMvwrZudWM72UCYF4X8wx4zeE4y2v97SQO7xsF9puycWbhEJiu1iXTqdquEVzqvIvfvvBDqBe59K8Rp57Cd+6hpJkYCJ+I="
       });
     }
