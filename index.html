@@ -164,6 +164,32 @@
       transition: background 0.2s;
     }
     .neptune-input-row button:hover { background: var(--ocean-deep); }
+    .neptune-autocomplete {
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0; right: 0;
+      background: #fff;
+      border: 1.5px solid rgba(77,145,180,0.4);
+      border-radius: 10px;
+      box-shadow: 0 8px 32px rgba(0,40,80,0.13);
+      z-index: 999;
+      overflow: hidden;
+      display: none;
+    }
+    .neptune-autocomplete.open { display: block; }
+    .neptune-ac-item {
+      padding: 0.75rem 1.25rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      color: var(--ocean-deep);
+      text-align: left;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(168,216,234,0.3);
+      line-height: 1.4;
+    }
+    .neptune-ac-item:last-child { border-bottom: none; }
+    .neptune-ac-item:hover, .neptune-ac-item.active { background: var(--horizon, #eef6fb); }
+    .neptune-ac-item strong { font-weight: 700; }
     @media (max-width: 520px) {
       .neptune-input-row { flex-direction: column; border-radius: 10px; }
       .neptune-input-row button { border-radius: 0 0 8px 8px; padding: 0.9rem; }
@@ -304,9 +330,12 @@
     <h2>Get Your NJ Flood Insurance Quote in Seconds</h2>
     <p>Standard home insurance does <strong>not</strong> cover flood. Enter your address below to see real-time options for your property — powered by Neptune Flood.</p>
     <form class="neptune-form" onsubmit="neptuneQuote(event,'home')">
-      <div class="neptune-input-row">
-        <input type="text" id="neptune-addr-home" placeholder="Enter your property address..." autocomplete="street-address" required aria-label="Property address">
-        <button type="submit">Get My Quote →</button>
+      <div style="position:relative;">
+        <div class="neptune-input-row">
+          <input type="text" id="neptune-addr-home" placeholder="Enter your property address..." autocomplete="off" required aria-label="Property address" aria-autocomplete="list" aria-controls="neptune-ac-home">
+          <button type="submit">Get My Quote →</button>
+        </div>
+        <div class="neptune-autocomplete" id="neptune-ac-home" role="listbox"></div>
       </div>
     </form>
     <p class="widget-disclaimer">Quotes provided by Neptune Flood. Abbey Insurance LLC acts as Agent of Record. Coverage subject to underwriting review.</p>
@@ -686,12 +715,76 @@
 
 <script src="main.js" defer></script>
 <script>
+  var NEPTUNE_SOURCE = 'PKtNzuTmzIPCzGMvwrZudWM72UCYF4X8wx4zeE4y2v97SQO7xsF9puycWbhEJiu1iXTqdquEVzqvIvfvvBDqBe59K8Rp57Cd%2B6hpJkYCJ%2BI%3D';
+
   function neptuneQuote(e, id) {
     e.preventDefault();
     var addr = document.getElementById('neptune-addr-' + id).value;
-    var url = 'https://neptuneflood.com/consumer-app/?source=PKtNzuTmzIPCzGMvwrZudWM72UCYF4X8wx4zeE4y2v97SQO7xsF9puycWbhEJiu1iXTqdquEVzqvIvfvvBDqBe59K8Rp57Cd%2B6hpJkYCJ%2BI%3D&address=' + encodeURIComponent(addr);
-    window.open(url, '_blank', 'noopener');
+    window.open('https://neptuneflood.com/consumer-app/?source=' + NEPTUNE_SOURCE + '&address=' + encodeURIComponent(addr), '_blank', 'noopener');
   }
+
+  function initNeptuneAutocomplete(inputId, dropdownId) {
+    var input = document.getElementById(inputId);
+    var dropdown = document.getElementById(dropdownId);
+    if (!input || !dropdown) return;
+    var timer, activeIdx = -1, results = [];
+
+    input.addEventListener('input', function () {
+      clearTimeout(timer);
+      var q = this.value.trim();
+      activeIdx = -1;
+      if (q.length < 3) { closeAC(); return; }
+      timer = setTimeout(function () { fetchSuggestions(q); }, 280);
+    });
+
+    input.addEventListener('keydown', function (e) {
+      var items = dropdown.querySelectorAll('.neptune-ac-item');
+      if (!items.length) return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); activeIdx = Math.min(activeIdx + 1, items.length - 1); highlight(items); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); activeIdx = Math.max(activeIdx - 1, 0); highlight(items); }
+      else if (e.key === 'Enter' && activeIdx >= 0) { e.preventDefault(); selectItem(results[activeIdx]); }
+      else if (e.key === 'Escape') { closeAC(); }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!input.contains(e.target) && !dropdown.contains(e.target)) closeAC();
+    });
+
+    function fetchSuggestions(q) {
+      var url = 'https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&limit=6&countrycodes=us&q=' + encodeURIComponent(q);
+      fetch(url, { headers: { 'Accept-Language': 'en' } })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          results = data;
+          if (!data.length) { closeAC(); return; }
+          dropdown.innerHTML = data.map(function (item, i) {
+            return '<div class="neptune-ac-item" role="option" data-idx="' + i + '">' + escHtml(item.display_name) + '</div>';
+          }).join('');
+          dropdown.classList.add('open');
+          dropdown.querySelectorAll('.neptune-ac-item').forEach(function (el) {
+            el.addEventListener('mousedown', function (e) { e.preventDefault(); selectItem(results[+this.dataset.idx]); });
+          });
+        })
+        .catch(function () { closeAC(); });
+    }
+
+    function selectItem(item) {
+      input.value = item.display_name;
+      closeAC();
+    }
+
+    function highlight(items) {
+      items.forEach(function (el, i) { el.classList.toggle('active', i === activeIdx); });
+      if (items[activeIdx]) input.value = results[activeIdx].display_name;
+    }
+
+    function closeAC() { dropdown.classList.remove('open'); dropdown.innerHTML = ''; results = []; activeIdx = -1; }
+    function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    initNeptuneAutocomplete('neptune-addr-home', 'neptune-ac-home');
+  });
 </script>
 </body>
 </html>
