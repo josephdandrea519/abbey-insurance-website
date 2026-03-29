@@ -87,6 +87,7 @@ nav.breadcrumb {
   box-shadow: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
+  justify-content: flex-start;
 }
 .nav-logo {
   display: flex;
