@@ -76,6 +76,18 @@ nav {
   height: 68px;
   box-shadow: 0 2px 24px var(--shadow);
 }
+/* breadcrumb is a <nav> — reset all inherited nav-bar styles */
+nav.breadcrumb {
+  background: transparent;
+  border: none;
+  padding: 0;
+  height: auto;
+  position: static;
+  z-index: auto;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
 .nav-logo {
   display: flex;
   align-items: center;
