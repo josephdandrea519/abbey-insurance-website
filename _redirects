@@ -27,5 +27,27 @@
 /watercraft_insurance   /watercraft-insurance-nj.html   301
 /renters_insurance      /renters-insurance-nj.html      301
 
+# Legacy .aspx mobile paths (/m/*) from old Zywave site
+/m/about.aspx           /about.html                     301!
+/m/contact.aspx         /contact.html                   301!
+/m/get_a_quote.aspx     /quote.html                     301!
+/m/locations.aspx       /contact.html                   301!
+/m/services.aspx        /                               301!
+/m/refer.aspx           /                               301!
+/m/links.aspx           /                               301!
+/m/default.aspx         /                               301!
+/m/*                    /                               301!
+
+# Legacy root-level .aspx pages
+/about.aspx             /about.html                     301!
+/contact.aspx           /contact.html                   301!
+/get_a_quote.aspx       /quote.html                     301!
+/locations.aspx         /contact.html                   301!
+/services.aspx          /                               301!
+/default.aspx           /                               301!
+/refer.aspx             /                               301!
+/links.aspx             /                               301!
+/*.aspx                 /                               301!
+
 # 404 catch-all (must be last)
 /*                  /404.html               404

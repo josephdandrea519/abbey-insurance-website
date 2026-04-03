@@ -114,6 +114,118 @@
   to = "/renters-insurance-nj.html"
   status = 301
 
+# Legacy .aspx mobile paths (/m/*) from old Zywave site — specific pages first
+[[redirects]]
+  from = "/m/about.aspx"
+  to = "/about.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/m/contact.aspx"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/m/get_a_quote.aspx"
+  to = "/quote.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/m/locations.aspx"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/m/services.aspx"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/m/refer.aspx"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/m/links.aspx"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/m/default.aspx"
+  to = "/"
+  status = 301
+  force = true
+
+# Catch-all for all remaining /m/* mobile paths
+[[redirects]]
+  from = "/m/*"
+  to = "/"
+  status = 301
+  force = true
+
+# Legacy root-level .aspx pages — specific pages first
+[[redirects]]
+  from = "/about.aspx"
+  to = "/about.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.aspx"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/get_a_quote.aspx"
+  to = "/quote.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/locations.aspx"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services.aspx"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/default.aspx"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/refer.aspx"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/links.aspx"
+  to = "/"
+  status = 301
+  force = true
+
+# Catch-all for all remaining *.aspx pages
+[[redirects]]
+  from = "/*.aspx"
+  to = "/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/404.html"
