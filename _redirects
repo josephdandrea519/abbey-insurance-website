@@ -10,7 +10,22 @@
 /business-insurance /business-insurance-nj.html 301
 /renters-insurance  /renters-insurance-nj.html  301
 /sandy              /hurricane-sandy.html   301
+/flood-insurance    /flood-insurance.html   301
 /hurricane-sandy    /hurricane-sandy.html   301
+
+# Zywave legacy URL redirects (301 permanent)
+/view_full_site         /                               301
+/locations              /contact.html                   301
+/get_a_quote            /quote.html                     301
+/about_us               /about.html                     301
+/contact_us             /contact.html                   301
+/auto_insurance         /auto-insurance-nj.html         301
+/homeowners_insurance   /home-insurance-nj.html         301
+/home_insurance         /home-insurance-nj.html         301
+/business_insurance     /business-insurance-nj.html     301
+/flood_insurance        /flood-insurance.html           301
+/watercraft_insurance   /watercraft-insurance-nj.html   301
+/renters_insurance      /renters-insurance-nj.html      301
 
 # 404 catch-all (must be last)
 /*                  /404.html               404

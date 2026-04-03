@@ -48,6 +48,73 @@
   status = 301
 
 [[redirects]]
+  from = "/flood-insurance"
+  to = "/flood-insurance.html"
+  status = 301
+
+# Zywave legacy URL redirects
+
+[[redirects]]
+  from = "/view_full_site"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/locations"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/get_a_quote"
+  to = "/quote.html"
+  status = 301
+
+[[redirects]]
+  from = "/about_us"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact_us"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/auto_insurance"
+  to = "/auto-insurance-nj.html"
+  status = 301
+
+[[redirects]]
+  from = "/homeowners_insurance"
+  to = "/home-insurance-nj.html"
+  status = 301
+
+[[redirects]]
+  from = "/home_insurance"
+  to = "/home-insurance-nj.html"
+  status = 301
+
+[[redirects]]
+  from = "/business_insurance"
+  to = "/business-insurance-nj.html"
+  status = 301
+
+[[redirects]]
+  from = "/flood_insurance"
+  to = "/flood-insurance.html"
+  status = 301
+
+[[redirects]]
+  from = "/watercraft_insurance"
+  to = "/watercraft-insurance-nj.html"
+  status = 301
+
+[[redirects]]
+  from = "/renters_insurance"
+  to = "/renters-insurance-nj.html"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
