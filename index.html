@@ -93,6 +93,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Neptune Flood Widget -->
+  <script src="https://neptuneflood.com/dtc-widget/NeptuneWidget.umd.js"></script>
+  <link rel="stylesheet" href="https://neptuneflood.com/dtc-widget/NeptuneWidget.css">
   <style>
     .flood-widget-section {
       background: var(--pearl);
@@ -282,8 +285,9 @@
   <div class="flood-widget-inner">
     <div class="section-label">Instant Flood Insurance Quote</div>
     <h2>Get Your NJ Flood Insurance Quote and Buy Your Policy in Seconds</h2>
-    <p>Standard home insurance does <strong>not</strong> cover flood. NJ homeowners in coastal, bayfront, and low-lying areas are especially at risk. Abbey Insurance can help you compare NFIP and private flood options — at no extra cost.</p>
-    <a href="flood-insurance.html" class="btn-primary" style="display:inline-block;margin-top:0.5rem;">Get a Flood Insurance Quote →</a>
+    <p>Standard home insurance does <strong>not</strong> cover flood. Enter your address below to see real-time options for your property — powered by Neptune Flood.</p>
+    <p class="widget-disclaimer">Quotes provided by Neptune Flood. Abbey Insurance LLC acts as Agent of Record. Coverage subject to underwriting review.</p>
+    <div id="neptune-widget-home"></div>
   </div>
 </section>
 
@@ -659,5 +663,15 @@
 </main>
 
 <script src="main.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    if (window.NeptuneWidget) {
+      NeptuneWidget.init({
+        element: "#neptune-widget-home",
+        source: "PKtNzuTmzIPCzGMvwrZudWM72UCYF4X8wx4zeE4y2v97SQO7xsF9puycWbhEJiu1iXTqdquEVzqvIvfvvBDqBe59K8Rp57Cd+6hpJkYCJ+I="
+      });
+    }
+  });
+</script>
 </body>
 </html>
