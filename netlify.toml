@@ -59,6 +59,82 @@
   to = "/"
   status = 301
 
+# Zywave legacy quote form + utility pages (no .aspx — catch-all would 404 these)
+[[redirects]]
+  from = "/auto_insurance_quote"
+  to = "/quote.html"
+  status = 301
+
+[[redirects]]
+  from = "/auto_insurance_quote.aspx"
+  to = "/quote.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/homeowners_insurance_quote"
+  to = "/quote.html"
+  status = 301
+
+[[redirects]]
+  from = "/homeowners_insurance_quote.aspx"
+  to = "/quote.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/home_insurance_quote"
+  to = "/quote.html"
+  status = 301
+
+[[redirects]]
+  from = "/home_insurance_quote.aspx"
+  to = "/quote.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/watercraft_insurance_quote"
+  to = "/quote.html"
+  status = 301
+
+[[redirects]]
+  from = "/watercraft_insurance_quote.aspx"
+  to = "/quote.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/boat_insurance_quote"
+  to = "/quote.html"
+  status = 301
+
+[[redirects]]
+  from = "/customer_service_forms"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/customer_service_forms.aspx"
+  to = "/contact.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/refer"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/automobile_insurance"
+  to = "/auto-insurance-nj.html"
+  status = 301
+
+[[redirects]]
+  from = "/automobile"
+  to = "/auto-insurance-nj.html"
+  status = 301
+
 [[redirects]]
   from = "/locations"
   to = "/contact.html"
