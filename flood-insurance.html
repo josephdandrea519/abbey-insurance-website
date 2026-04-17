@@ -46,10 +46,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Neptune Flood Widget -->
-  <script src="https://neptuneflood.com/dtc-widget/NeptuneWidget.umd.js"></script>
-  <link rel="stylesheet" href="https://neptuneflood.com/dtc-widget/NeptuneWidget.css">
-
   <style>
     /* ── FLOOD QUOTE WIDGET SECTION ── */
     .flood-widget-section {
@@ -246,9 +242,8 @@
   <div class="flood-widget-inner">
     <div class="section-label">Instant Flood Insurance Quote</div>
     <h2>Get Your NJ Flood Insurance Quote and Buy Your Policy in Seconds</h2>
-    <p>Enter your address below to see real-time flood insurance options for your property. Powered by Neptune Flood — one of the nation's top private flood carriers.</p>
-    <p class="widget-disclaimer">Quotes provided by Neptune Flood. Abbey Insurance LLC acts as Agent of Record. Coverage subject to underwriting review.</p>
-    <div id="neptune-widget-home"></div>
+    <p>Abbey Insurance shops both NFIP and private flood carriers — including Neptune Flood — to find the right coverage at the right price for your NJ property. Takes just a few minutes.</p>
+    <a href="quote.html" class="btn-primary" style="display:inline-block;margin-top:0.5rem;">Request a Flood Insurance Quote →</a>
   </div>
 </section>
 
@@ -427,42 +422,5 @@
 </main>
 
 <script src="main.js" defer></script>
-<script>
-  window.addEventListener('load', function () {
-    if (window.NeptuneWidget) {
-      NeptuneWidget.init({
-        element: "#neptune-widget-home",
-        source: "PKtNzuTmzIPCzGMvwrZudWM72UCYF4X8wx4zeE4y2v97SQO7xsF9puycWbhEJiu1iXTqdquEVzqvIvfvvBDqBe59K8Rp57Cd+6hpJkYCJ+I="
-      });
-    }
-  });
-
-  // Force Neptune dropdown background opaque regardless of widget CSS class names
-  var neptuneObserver = new MutationObserver(function(mutations) {
-    mutations.forEach(function(mutation) {
-      mutation.addedNodes.forEach(function(node) {
-        if (node.nodeType !== 1) return;
-        var candidates = [node].concat(Array.prototype.slice.call(node.querySelectorAll('*')));
-        candidates.forEach(function(el) {
-          var tag = el.tagName && el.tagName.toLowerCase();
-          var cls = el.className && typeof el.className === 'string' ? el.className.toLowerCase() : '';
-          var role = el.getAttribute && el.getAttribute('role');
-          if (tag === 'ul' || tag === 'li' || role === 'listbox' || role === 'option' ||
-              cls.indexOf('suggest') > -1 || cls.indexOf('dropdown') > -1 ||
-              cls.indexOf('autocomplete') > -1 || cls.indexOf('pac-') > -1 ||
-              cls.indexOf('result') > -1 || cls.indexOf('list') > -1) {
-            el.style.setProperty('background-color', '#ffffff', 'important');
-            el.style.setProperty('background', '#ffffff', 'important');
-            el.style.setProperty('opacity', '1', 'important');
-            if (tag === 'ul' || role === 'listbox') {
-              el.style.setProperty('box-shadow', '0 6px 24px rgba(0,40,80,0.15)', 'important');
-            }
-          }
-        });
-      });
-    });
-  });
-  neptuneObserver.observe(document.body, { childList: true, subtree: true });
-</script>
 </body>
 </html>
