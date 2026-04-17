@@ -396,12 +396,35 @@
       if (!validateStep(currentStep)) { return; }
       collectFormData();
 
-      // Only include fields that have a value — keeps Netlify email readable
-      var raw = new FormData(form);
       var params = new URLSearchParams();
-      raw.forEach(function (value, key) {
-        if (typeof value === 'string' ? value.trim() !== '' : value) {
+
+      // Collect checkbox groups: same-name checkboxes → single comma-separated value
+      // (prevents Netlify from formatting them as a JSON array in the email)
+      var checkboxNames = new Set();
+      var checkboxValues = {};
+      form.querySelectorAll('input[type="checkbox"]').forEach(function (cb) {
+        checkboxNames.add(cb.name);
+        if (cb.checked) {
+          if (!checkboxValues[cb.name]) { checkboxValues[cb.name] = []; }
+          checkboxValues[cb.name].push(cb.value);
+        }
+      });
+
+      // Add non-checkbox fields — always include Netlify control fields,
+      // skip empty values for everything else
+      var netlifyFields = ['form-name', 'bot-field'];
+      new FormData(form).forEach(function (value, key) {
+        if (checkboxNames.has(key)) { return; } // handled below
+        var isEmpty = typeof value === 'string' && value.trim() === '';
+        if (!isEmpty || netlifyFields.indexOf(key) !== -1) {
           params.append(key, value);
+        }
+      });
+
+      // Add each checkbox group as a single comma-separated string
+      checkboxNames.forEach(function (name) {
+        if (checkboxValues[name] && checkboxValues[name].length > 0) {
+          params.append(name, checkboxValues[name].join(', '));
         }
       });
 
