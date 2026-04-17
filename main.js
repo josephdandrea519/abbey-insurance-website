@@ -396,10 +396,19 @@
       if (!validateStep(currentStep)) { return; }
       collectFormData();
 
+      // Only include fields that have a value — keeps Netlify email readable
+      var raw = new FormData(form);
+      var params = new URLSearchParams();
+      raw.forEach(function (value, key) {
+        if (typeof value === 'string' ? value.trim() !== '' : value) {
+          params.append(key, value);
+        }
+      });
+
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString()
+        body: params.toString()
       })
         .then(function () {
           window.location.href = 'thank-you.html';
