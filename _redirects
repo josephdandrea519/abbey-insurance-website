@@ -1,5 +1,8 @@
 # Abbey Insurance LLC — Netlify Redirects
 
+# www → canonical non-www redirect (must be first)
+https://www.abbeyinsnj.com/* https://abbeyinsnj.com/:splat 301!
+
 # Clean URL redirects
 /thank-you          /thank-you.html         301
 /quote              /quote.html             301

@@ -4,4 +4,4 @@ Disallow: /thank-you.html
 Disallow: /404.html
 Disallow: /forms.html
 
-Sitemap: https://www.abbeyinsnj.com/sitemap.xml
+Sitemap: https://abbeyinsnj.com/sitemap.xml

@@ -2,6 +2,13 @@
   publish = "./"
   # No build command — plain HTML/CSS/JS site
 
+# www → canonical non-www (must be first redirect rule)
+[[redirects]]
+  from = "https://www.abbeyinsnj.com/*"
+  to = "https://abbeyinsnj.com/:splat"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/thank-you"
   to = "/thank-you.html"
