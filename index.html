@@ -127,13 +127,20 @@
     #neptune-widget-home {
       max-width: 700px;
       margin: 0 auto;
+      position: relative;
+      z-index: 10;
     }
-    /* Force Neptune widget address dropdown opaque */
+    .flood-widget-section {
+      overflow: visible !important;
+    }
+    /* Force Neptune widget address dropdown above surrounding content */
     #neptune-widget-home ul,
     #neptune-widget-home [class*="suggest"],
     #neptune-widget-home [class*="dropdown"],
     #neptune-widget-home [class*="autocomplete"],
     #neptune-widget-home [role="listbox"] {
+      position: relative !important;
+      z-index: 9999 !important;
       background: #ffffff !important;
       background-color: #ffffff !important;
       opacity: 1 !important;
