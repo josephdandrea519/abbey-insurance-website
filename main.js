@@ -221,7 +221,7 @@
         }
       });
       // Show/hide coverage detail sections
-      const sections = { auto: 'auto-fields', home: 'home-fields', business: 'business-fields', renters: 'renters-fields', watercraft: 'watercraft-fields' };
+      const sections = { auto: 'auto-fields', home: 'home-fields', business: 'business-fields', renters: 'renters-fields', watercraft: 'watercraft-fields', flood: 'flood-fields' };
       Object.keys(sections).forEach(function (key) {
         const sec = document.getElementById(sections[key]);
         if (sec) {
@@ -427,6 +427,21 @@
           params.append(name, checkboxValues[name].join(', '));
         }
       });
+
+      // Route to specific form name based on single vs. multiple coverage selection
+      var selectedTypes = [];
+      form.querySelectorAll('.coverage-type-check:checked').forEach(function (cb) {
+        selectedTypes.push(cb.value.toLowerCase());
+      });
+      var targetFormName = 'quote-request'; // default: combined / multi-policy
+      if (selectedTypes.length === 1) {
+        var t = selectedTypes[0];
+        if (t.indexOf('auto') > -1)       { targetFormName = 'quote-auto'; }
+        else if (t.indexOf('home') > -1)  { targetFormName = 'quote-homeowners'; }
+        else if (t.indexOf('flood') > -1) { targetFormName = 'quote-flood'; }
+        else if (t.indexOf('water') > -1) { targetFormName = 'quote-watercraft'; }
+      }
+      params.set('form-name', targetFormName);
 
       fetch('/', {
         method: 'POST',
