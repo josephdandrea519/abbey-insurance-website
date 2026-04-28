@@ -2,9 +2,6 @@
   publish = "./"
   # No build command — plain HTML/CSS/JS site
 
-[functions]
-  directory = "netlify/functions"
-
 # www → canonical non-www (must be first redirect rule)
 [[redirects]]
   from = "https://www.abbeyinsnj.com/*"
